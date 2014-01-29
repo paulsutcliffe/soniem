@@ -32,20 +32,37 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :test do
-  gem 'cucumber-rails', :require => false
-  # database_cleaner is not required, but highly recommended
-  gem 'database_cleaner'
-end
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem "unicorn"
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem "capistrano", group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "bootstrap-sass", "~> 3.0.3.0"
+gem "compass-rails", group: :assets
+gem "rails_layout", group: :development
+gem "rvm-capistrano"
+gem "haml"
+gem "scaffold-bootstrap3"
+gem "inherited_resources"
+gem "page_title_helper"
+gem "friendly_id", "~> 5.0.0"
+gem "devise"
+gem "mini_magick"
+gem "carrierwave"
+
+group :test do
+    gem 'cucumber-rails', :require => false
+    gem 'database_cleaner'
+    gem "fake", group: :test
+    gem "capybara", "~> 2.2.1", group: :test
+    gem "launchy", "~> 2.4.2", group: :test
+    gem "rspec-rails", "~> 3.0.0.beta", group: [:test, :development]
+    gem "factory_girl_rails", "~> 4.3.0", group: [:test, :development]
+end

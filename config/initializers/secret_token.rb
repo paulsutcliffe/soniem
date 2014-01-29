@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Soniem::Application.config.secret_key_base = 'da28dadff9a23d89ed1644b7b78a0701dd49861c670ce5e51930f3d95da658f8e0160956bb2309e73c816b1cc08a658e43b66b3220c06ecc9fcdff48473ec90a'
+Soniem::Application.config.secret_key_base = 'bf62d6a3297097e219a87bf9ed9a669ecbed7040e9c6f11d6906d8fbaa253d1bf1b5cf2a38d032602724b0ffe6a45058b4bb7c674b45bead5a6358c23d7bd4a5'
