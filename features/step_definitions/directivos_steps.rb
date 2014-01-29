@@ -15,7 +15,7 @@ Cuando(/^uso el nombre "(.*?)"$/) do |valor|
 end
 
 Cuando(/^uso el cargo "(.*?)"$/) do |cargo|
-  fil_in "Cargo", with: cargo
+  fill_in "Cargo", with: cargo
 end
 
 Cuando(/^uso la foto "(.*?)"$/) do |archivo|
