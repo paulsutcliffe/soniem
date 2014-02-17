@@ -28,8 +28,8 @@ Escenario: Editar socio
   Y que estoy en la página inicial
   Cuando hago click en "Socios"
   Y hago click en "Editar"
-  Y uso el nombre "nuevo socio"
-  Y uso el contenido "contenido"
+  Y lleno "Nombre" con "nuevo socio"
+  Y lleno "Contenido" con "contenido"
   Y presiono "Guardar"
   Entonces debería ver "El socio ha sido editado."
 
