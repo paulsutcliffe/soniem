@@ -12,3 +12,11 @@ Dado(/^que existe un tema$/) do
               formato: "formato",
               socio_id: "1").save!
 end
+
+Dado(/^que existe el tema con titulo "(.*?)" con año "(.*?)" con duracion "(.*?)" con formato "(.*?)"$/) do |titulo, año, duracion, formato|
+  Tema.create(titulo: titulo,
+              año: año,
+              duracion: duracion,
+              formato: formato,
+              socio_id: "1").save!
+end
