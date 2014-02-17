@@ -9,3 +9,6 @@ end
 Cuando(/^uso la imagen "(.*?)"$/) do |archivo|
   attach_file("Imagen", File.expand_path("features/support/" + archivo))
 end
+Dado(/^que existe el slide "(.*?)"$/) do |imagen|
+  Slide.create(imagen: File.new("features/support/#{imagen}")).save!
+end

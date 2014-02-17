@@ -29,3 +29,13 @@ Escenario: Eliminar Noticia
   Cuando hago click en "Noticias"
   Y hago click en "Eliminar"
   Entonces debería ver "La noticia se ha eliminado."
+
+Esquema del escenario: las noticias pueden verse en la página de inicio
+  Dado que existe la noticia con imagen "<imagen>" con título "<titulo>" con fecha "<fecha>" con contenido "<contenido>"
+  Y que estoy en la página inicial
+  Entonces debería ver la imagen "<imagen>"
+
+  Ejemplos:
+    | imagen              | titulo    | fecha      | contenido   |
+    | imagen_noticia1.jpg | noticia 1 | 03-02-2014 | contenido 1 |
+    | imagen_noticia2.jpg | noticia 2 | 03-02-2014 | contenido 2 |

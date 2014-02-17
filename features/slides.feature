@@ -28,3 +28,13 @@ Escenario: Eliminar slide
   Cuando hago click en "Slides"
   Y hago click en "Eliminar"
   Entonces debería ver "El slide se ha eliminado"
+
+Esquema del escenario: los slides pueden verse en la página de inicio
+  Dado que existe el slide "<imagen>"
+  Y que estoy en la página inicial
+  Entonces debería ver la imagen "<imagen>"
+
+  Ejemplos:
+    | imagen     |
+    | slide1.jpg |
+    | slide2.jpg |

@@ -17,3 +17,13 @@ end
 Cuando(/^uso el titulo "(.*?)"$/) do |valor|
   fill_in "titulo", with: valor
 end
+
+Dado(/^que existe la noticia con imagen "(.*?)" con título "(.*?)" con fecha "(.*?)" con contenido "(.*?)"$/) do |imagen, titulo, fecha, contenido|
+  Noticia.create(imagen: File.new("features/support/#{imagen}"),
+                 titulo: titulo,
+                 fecha: fecha,
+                 contenido: contenido).save!
+end
+Entonces(/^debería ver la imagen "(.*?)"$/) do |archivo|
+  page.should have_xpath("//img[contains(@src, \"#{archivo}\")]")
+end

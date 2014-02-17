@@ -15,4 +15,9 @@ Esquema del escenario: Crear un socio
   Y lleno "Facebook" con "<facebook>"
   Y lleno "Soundcloud" con "<soundcloud>"
   Y lleno "twitter" con "<twitter>"
-  Y lleno "Nombre" con "<nombre>"
+  Entonces debería ver "Socio creado con éxito."
+
+  Ejemplos:
+    | nombre | contenido | fotografia      | email              | web | facebook | soundcloud | twitter |
+    | adriel | contenido | foto_directivo1 | adriel@kosmyka.com | web | facebook | soundcloud | twitter |
+    | juan   | contenido | foto_directivo2 | juan@hotmail.com   | web | facebook | soundcloud | twitter |
