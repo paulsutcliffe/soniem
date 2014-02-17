@@ -21,3 +21,22 @@ Esquema del escenario: Crear un socio
     | nombre | contenido | fotografia      | email              | web | facebook | soundcloud | twitter |
     | adriel | contenido | foto_directivo1 | adriel@kosmyka.com | web | facebook | soundcloud | twitter |
     | juan   | contenido | foto_directivo2 | juan@hotmail.com   | web | facebook | soundcloud | twitter |
+
+Escenario: Editar socio
+  Dado que existe un socio
+  Y que he iniciado sesión como administrador
+  Y que estoy en la página inicial
+  Cuando hago click en "Socios"
+  Y hago click en "Editar"
+  Y uso el nombre "nuevo socio"
+  Y uso el contenido "contenido"
+  Y presiono "Guardar"
+  Entonces debería ver "El socio ha sido editado."
+
+Escenario: Eliminar socio
+  Dado que existe un socio
+  Y que he iniciado sesión como administrador
+  Y que estoy en la página inicial
+  Cuando hago click en "Socios"
+  Y hago click en "Eliminar"
+  Entonces debería ver "El socio ha sido eliminado."
