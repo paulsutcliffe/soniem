@@ -13,3 +13,7 @@ FactoryGirl.create :socio
 10.times do
   FactoryGirl.create :convenio
 end
+
+10.times do
+  FactoryGirl.create :directivo
+end

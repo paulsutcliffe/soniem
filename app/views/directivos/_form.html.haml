@@ -1,0 +1,22 @@
+= form_for @directivo, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @directivo.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@directivo.errors.count, "error")}"
+      %ul
+        - @directivo.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :nombre, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :nombre, class: 'form-control'
+  .form-group
+    = f.label :cargo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :cargo, class: 'form-control'
+  .form-group
+    = f.label :foto, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :foto, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'

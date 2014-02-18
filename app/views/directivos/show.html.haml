@@ -1,0 +1,21 @@
+#region-directivos.container
+  .region
+    .region-title
+      %h1= page_title!('directivo')
+
+  .region
+    %p
+      %b Nombre:
+      = @directivo.nombre
+    %p
+      %b Cargo:
+      = @directivo.cargo
+    %p
+      %b Foto:
+      = @directivo.foto
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_directivo_path(@directivo), class: 'btn btn-success'
+    = link_to 'Regresar', directivos_path, class: 'btn btn-warning'

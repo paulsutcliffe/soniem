@@ -1,5 +1,7 @@
 Soniem::Application.routes.draw do
 
+  resources :directivos
+
   resources :convenios
 
   get "quienes_somos/que_es_soniem"
