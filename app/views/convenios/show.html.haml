@@ -1,0 +1,18 @@
+#region-convenios.container
+  .region
+    .region-title
+      %h1= page_title!('convenio')
+
+  .region
+    %p
+      %b Nombre:
+      = @convenio.nombre
+    %p
+      %b Descripcion:
+      = @convenio.descripcion
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_convenio_path(@convenio), class: 'btn btn-success'
+    = link_to 'Regresar', convenios_path, class: 'btn btn-warning'

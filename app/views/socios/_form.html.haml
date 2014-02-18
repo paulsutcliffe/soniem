@@ -1,0 +1,38 @@
+= form_for @socio, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @socio.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@socio.errors.count, "error")}"
+      %ul
+        - @socio.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :nombre, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :nombre, class: 'form-control'
+  .form-group
+    = f.label :contenido, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :contenido, class: 'form-control'
+  .form-group
+    = f.label :fotografia, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :fotografia, class: 'form-control'
+  .form-group
+    = f.label :web, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :web, class: 'form-control'
+  .form-group
+    = f.label :twitter, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :twitter, class: 'form-control'
+  .form-group
+    = f.label :facebook, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :facebook, class: 'form-control'
+  .form-group
+    = f.label :soundcloud, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :soundcloud, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'

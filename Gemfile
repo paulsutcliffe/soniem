@@ -60,7 +60,7 @@ gem "carrierwave"
 group :test do
     gem 'cucumber-rails', :require => false
     gem 'database_cleaner'
-    gem "fake", group: :test
+    gem "faker", group: :test
     gem "capybara", "~> 2.2.1", group: :test
     gem "launchy", "~> 2.4.2", group: :test
     gem "rspec-rails", "~> 3.0.0.beta", group: [:test, :development]

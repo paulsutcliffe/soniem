@@ -1,0 +1,38 @@
+#region-socios.container
+
+  .region
+    .region-title
+      %h1= page_title!('socios')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Socio', new_socio_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Contenido
+            %th Fotografia
+            %th Web
+            %th Twitter
+            %th Facebook
+            %th Soundcloud
+            %th
+            %th
+            %th
+
+          - @socios.each do |socio|
+            %tr
+              %td= socio.nombre
+              %td= socio.contenido
+              %td= image_tag socio.fotografia_url(:medium)
+              %td= socio.web
+              %td= socio.twitter
+              %td= socio.facebook
+              %td= socio.soundcloud
+              %td= link_to 'Ver', socio, class: 'btn btn-info'
+              - if current_admin
+                %td= link_to 'Editar', edit_socio_path(socio), class: 'btn btn-success'
+                %td= link_to 'Eliminar', socio, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

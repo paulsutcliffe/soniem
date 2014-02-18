@@ -1,0 +1,33 @@
+#region-socios.container
+  .region
+    .region-title
+      %h1= page_title!('socio')
+
+  .region
+    %p
+      %b Nombre:
+      = @socio.nombre
+    %p
+      %b Contenido:
+      = @socio.contenido
+    %p
+      %b Fotografia:
+      = @socio.fotografia
+    %p
+      %b Web:
+      = @socio.web
+    %p
+      %b Twitter:
+      = @socio.twitter
+    %p
+      %b Facebook:
+      = @socio.facebook
+    %p
+      %b Soundcloud:
+      = @socio.soundcloud
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_socio_path(@socio), class: 'btn btn-success'
+    = link_to 'Regresar', socios_path, class: 'btn btn-warning'

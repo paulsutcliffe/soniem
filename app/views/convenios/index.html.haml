@@ -1,0 +1,26 @@
+#region-convenios.container
+
+  .region
+    .region-title
+      %h1= page_title!('convenios')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Convenio', new_convenio_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Descripcion
+            %th
+            %th
+
+          - @convenios.each do |convenio|
+            %tr
+              %td= convenio.nombre
+              %td= convenio.descripcion
+              - if current_admin
+                %td= link_to 'Editar', edit_convenio_path(convenio), class: 'btn btn-success'
+                %td= link_to 'Eliminar', convenio, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
