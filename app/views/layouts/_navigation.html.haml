@@ -3,5 +3,14 @@
     = link_to "Reemplazar por el nombre del nuevo proyecto", root_path, class: 'navbar-brand'
   .collapse.navbar-collapse
     %ul.nav.navbar-nav
-      %li= link_to 'Inicio', root_path, class: 'active'
-      %li= link_to 'Quienes Somos', quienes_somos_que_es_soniem_path
+      - if current_admin
+        %li= link_to 'Inicio', root_path, class: 'active'
+        %li= link_to 'Slides', slides_path
+        %li= link_to 'Quienes Somos', quienes_somos_que_es_soniem_path
+        %li= link_to 'Cerrar sesión', destroy_admin_session_path, method: :delete
+      - else
+        %li= link_to 'Inicio', root_path, class: 'active'
+        %li= link_to 'Quienes Somos', quienes_somos_que_es_soniem_path
+
+
+

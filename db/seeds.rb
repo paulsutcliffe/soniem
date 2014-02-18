@@ -17,3 +17,7 @@ end
 10.times do
   FactoryGirl.create :directivo
 end
+
+3.times do
+  FactoryGirl.create :slide
+end
