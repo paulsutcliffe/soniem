@@ -16,7 +16,7 @@
     %p
       - if @comunicado.pdf.present?
         %b Pdf:
-        = link_to 'Descargar PDF', @comunicado.pdf_url, download:.pdf.filename, class: 'btn btn-success'
+        = link_to 'Descargar PDF', @comunicado.pdf_url, download: @comunicado.pdf.filename, class: 'btn btn-success'
 
   .region
     - if current_admin

@@ -1,5 +1,7 @@
 Soniem::Application.routes.draw do
 
+  resources :ubicaciones
+
   resources :comunicados
 
   resources :contactos

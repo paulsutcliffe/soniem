@@ -17,8 +17,7 @@ Escenario: Editar Comunicado
   Y que estoy en la página inicial
   Cuando hago click en "Comunicados"
   Y hago click en "Editar"
-  Y uso el titulo "Nuevo comunicado"
-  Y uso la fecha "29-01-2014"
+  Y lleno "Titulo" con "Nuevo comunicado"
   Cuando presiono "Guardar"
   Entonces debería ver "El comunicado ha sido editado."
 

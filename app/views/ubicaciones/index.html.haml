@@ -1,0 +1,21 @@
+#region-ubicaciones.container
+
+  .region
+    .region-title
+      %h1= page_title!('ubicaciones')
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Lat
+            %th Lng
+            %th Direccion
+            %th
+
+          - @ubicaciones.each do |ubicacion|
+            %tr
+              %td= ubicacion.lat
+              %td= ubicacion.lng
+              %td= ubicacion.direccion
+              - if current_admin
+                %td= link_to 'Editar', edit_ubicacion_path(ubicacion), class: 'btn btn-success'

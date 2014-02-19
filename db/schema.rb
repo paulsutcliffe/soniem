@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140219205939) do
+ActiveRecord::Schema.define(version: 20140219223117) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -104,5 +104,13 @@ ActiveRecord::Schema.define(version: 20140219205939) do
 
   add_index "socios", ["email"], name: "index_socios_on_email", unique: true, using: :btree
   add_index "socios", ["reset_password_token"], name: "index_socios_on_reset_password_token", unique: true, using: :btree
+
+  create_table "ubicaciones", force: true do |t|
+    t.float    "lat"
+    t.float    "lng"
+    t.string   "direccion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

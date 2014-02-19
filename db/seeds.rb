@@ -29,3 +29,9 @@ end
 10.times do
   FactoryGirl.create :comunicado
 end
+
+10.times do
+  FactoryGirl.create :contacto
+end
+
+Ubicacion.create(direccion: 'Estadio Municipal de La Molina', lat: 123 , lng: 123)

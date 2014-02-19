@@ -17,10 +17,10 @@ Escenario: Editar Noticia
   Y que estoy en la página inicial
   Cuando hago click en "Noticias"
   Y hago click en "Editar"
-  Y uso el titulo "Nueva noticia"
+  Y lleno "Titulo" con "Nueva noticia"
   Y uso la imagen "imagen_noticia1.jpg"
   Cuando presiono "Guardar"
-  Entonces debería ver "La noticia se ha editado."
+  Entonces debería ver "La noticia ha sido editada."
 
 Escenario: Eliminar Noticia
   Dado que existe una noticia
@@ -28,7 +28,7 @@ Escenario: Eliminar Noticia
   Y que estoy en la página inicial
   Cuando hago click en "Noticias"
   Y hago click en "Eliminar"
-  Entonces debería ver "La noticia se ha eliminado."
+  Entonces debería ver "La noticia ha sido eliminada."
 
 Esquema del escenario: las noticias pueden verse en la página de inicio
   Dado que existe la noticia con imagen "<imagen>" con título "<titulo>" con fecha "<fecha>" con contenido "<contenido>"

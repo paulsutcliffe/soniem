@@ -1,0 +1,21 @@
+#region-ubicaciones.container
+  .region
+    .region-title
+      %h1= page_title!('ubicacion')
+
+  .region
+    %p
+      %b Lat:
+      = @ubicacion.lat
+    %p
+      %b Lng:
+      = @ubicacion.lng
+    %p
+      %b Direccion:
+      = @ubicacion.direccion
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_ubicacion_path(@ubicacion), class: 'btn btn-success'
+    = link_to 'Regresar', ubicaciones_path, class: 'btn btn-warning'

@@ -1,0 +1,22 @@
+= form_for @ubicacion, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @ubicacion.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@ubicacion.errors.count, "error")}"
+      %ul
+        - @ubicacion.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :lat, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :lat, class: 'form-control'
+  .form-group
+    = f.label :lng, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :lng, class: 'form-control'
+  .form-group
+    = f.label :direccion, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :direccion, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'
