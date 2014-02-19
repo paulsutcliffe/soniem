@@ -1,5 +1,5 @@
 #Coding: utf-8
-email = 'email@domain.com'
+email = 'adriel@domain.com'
 password = '12345678'
 Dado(/^que existe un administrador$/) do
   Admin.new(email: email, password: password, password_confirmation: password).save!
@@ -19,7 +19,7 @@ Cuando(/^lleno el formulario con los datos del administrador$/) do
 end
 
 Cuando(/^presiono "(.*?)"$/) do |boton|
-  click_buttom(botin)
+  click_button(boton)
 end
 
 Entonces(/^debería ver "(.*?)"$/) do |resultado|

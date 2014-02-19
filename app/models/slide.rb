@@ -1,3 +1,3 @@
 class Slide < ActiveRecord::Base
-  mount_uploader :imagen, ImagenUploader
+  mount_uploader :imagen, SlideUploader
 end

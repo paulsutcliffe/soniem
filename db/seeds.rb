@@ -21,3 +21,7 @@ end
 3.times do
   FactoryGirl.create :slide
 end
+
+10.times do
+  FactoryGirl.create :noticia
+end
