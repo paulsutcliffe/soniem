@@ -1,5 +1,7 @@
 Soniem::Application.routes.draw do
 
+  resources :contactos
+
   resources :noticias
 
   resources :slides
