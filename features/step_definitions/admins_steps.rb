@@ -1,5 +1,5 @@
 #Coding: utf-8
-email = 'adriel@domain.com'
+email = 'email@domain.com'
 password = '12345678'
 Dado(/^que existe un administrador$/) do
   Admin.new(email: email, password: password, password_confirmation: password).save!
@@ -27,7 +27,7 @@ Entonces(/^debería ver "(.*?)"$/) do |resultado|
 end
 
 Dado(/^que he iniciado sesión como administrador$/) do
-  Admin.new(:email => email, :password => password, :password_confirmation => password).save!
+  #Admin.new(:email => email, :password => password, :password_confirmation => password).save!
   visit('/cms/ingresar')
   fill_in "Email", :with => email
   fill_in "Contraseña", :with => password

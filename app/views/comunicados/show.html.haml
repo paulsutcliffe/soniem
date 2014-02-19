@@ -1,0 +1,25 @@
+#region-comunicados.container
+  .region
+    .region-title
+      %h1= page_title!('comunicado')
+
+  .region
+    %p
+      %b Titulo:
+      = @comunicado.titulo
+    %p
+      %b Contenido:
+      = @comunicado.contenido
+    %p
+      %b Fecha:
+      = @comunicado.fecha
+    %p
+      - if @comunicado.pdf.present?
+        %b Pdf:
+        = link_to 'Descargar PDF', @comunicado.pdf_url, download:.pdf.filename, class: 'btn btn-success'
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_comunicado_path(@comunicado), class: 'btn btn-success'
+    = link_to 'Regresar', comunicados_path, class: 'btn btn-warning'

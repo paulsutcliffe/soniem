@@ -25,3 +25,7 @@ end
 10.times do
   FactoryGirl.create :noticia
 end
+
+10.times do
+  FactoryGirl.create :comunicado
+end

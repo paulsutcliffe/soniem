@@ -58,6 +58,7 @@ gem "mini_magick"
 gem "carrierwave"
 
 group :test do
+    gem 'selenium-webdriver'
     gem 'cucumber-rails', :require => false
     gem 'database_cleaner'
     gem "faker", group: :test
