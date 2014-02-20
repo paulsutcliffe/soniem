@@ -6,10 +6,10 @@ Escenario: Crear slide
   Dado que he iniciado sesión como administrador
   Y que estoy en la página inicial
   Cuando hago click en "Slides"
-  Y hago click en "Crear slide"
+  Y hago click en "Crear Slide"
   Y lleno el formulario con los datos del slide
   Y presiono "Guardar"
-  Entonces debería ver "El slide ha sido creado con éxito."
+  Entonces debería ver "Slide creado con éxito."
 
 Escenario: Editar slide
   Dado que existe un slide
@@ -19,7 +19,7 @@ Escenario: Editar slide
   Y hago click en "Editar"
   Y uso la imagen "slide2.jpg"
   Y presiono "Guardar"
-  Entonces debería ver "El slide se ha editado"
+  Entonces debería ver "El slide ha sido editado"
 
 Escenario: Eliminar slide
   Dado que existe un slide
@@ -27,7 +27,7 @@ Escenario: Eliminar slide
   Y que estoy en la página inicial
   Cuando hago click en "Slides"
   Y hago click en "Eliminar"
-  Entonces debería ver "El slide se ha eliminado"
+  Entonces debería ver "El slide ha sido eliminado"
 
 Esquema del escenario: los slides pueden verse en la página de inicio
   Dado que existe el slide "<imagen>"

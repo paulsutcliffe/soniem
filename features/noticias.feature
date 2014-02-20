@@ -33,6 +33,7 @@ Escenario: Eliminar Noticia
 Esquema del escenario: las noticias pueden verse en la página de inicio
   Dado que existe la noticia con imagen "<imagen>" con título "<titulo>" con fecha "<fecha>" con contenido "<contenido>"
   Y que estoy en la página inicial
+  Cuando hago click en "Noticias"
   Entonces debería ver la imagen "<imagen>"
 
   Ejemplos:

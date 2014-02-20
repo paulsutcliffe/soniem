@@ -1,5 +1,11 @@
+- content_for :javascript do
+  = javascript_include_tag 'ubicaciones.js'
+  = google_maps_api
+
 #region-ubicaciones.container
 
+  .map-wrapper
+    = render 'mapa'
   .region
     .region-title
       %h1= page_title!('ubicaciones')

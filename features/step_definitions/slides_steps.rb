@@ -1,5 +1,5 @@
 Cuando(/^lleno el formulario con los datos del slide$/) do
-  attach_file("Foto", File.expand_path("features/support/slide1.jpg"))
+  attach_file("Imagen", File.expand_path("features/support/slide1.jpg"))
 end
 
 Dado(/^que existe un slide$/) do
