@@ -1,0 +1,17 @@
+- page_title!('Creando audio')
+
+#region-audios.container
+
+  .region
+    .region-title
+      %h1
+        Creando
+        %b
+          audio
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

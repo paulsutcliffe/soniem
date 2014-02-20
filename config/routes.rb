@@ -1,5 +1,9 @@
 Soniem::Application.routes.draw do
 
+  resources :audios
+
+  resources :temas
+
   resources :eventos
 
   resources :ubicaciones

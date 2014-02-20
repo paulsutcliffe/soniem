@@ -1,0 +1,18 @@
+= form_for @audio, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @audio.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@audio.errors.count, "error")}"
+      %ul
+        - @audio.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :titulo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :titulo, class: 'form-control'
+  .form-group
+    = f.label :audio, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = file_field :audio, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'

@@ -1,0 +1,26 @@
+#region-audios.container
+
+  .region
+    .region-title
+      %h1= page_title!('audios')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Audio', new_audio_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Titulo
+            %th Audio
+            %th
+            %th
+
+          - @audios.each do |audio|
+            %tr
+              %td= audio.titulo
+              %td= audio.audio
+              - if current_admin
+                %td= link_to 'Editar', edit_audio_path(audio), class: 'btn btn-success'
+                %td= link_to 'Eliminar', audio, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

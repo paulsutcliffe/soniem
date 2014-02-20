@@ -1,0 +1,24 @@
+#region-temas.container
+  .region
+    .region-title
+      %h1= page_title!('tema')
+
+  .region
+    %p
+      %b Titulo:
+      = @tema.titulo
+    %p
+      %b Ano:
+      = @tema.ano
+    %p
+      %b Duracion:
+      = @tema.duracion
+    %p
+      %b Formato:
+      = @tema.formato
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_tema_path(@tema), class: 'btn btn-success'
+    = link_to 'Regresar', temas_path, class: 'btn btn-warning'
