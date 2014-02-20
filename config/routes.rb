@@ -1,5 +1,7 @@
 Soniem::Application.routes.draw do
 
+  resources :eventos
+
   resources :ubicaciones
 
   resources :comunicados
