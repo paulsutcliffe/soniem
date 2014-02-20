@@ -1,5 +1,6 @@
 Soniem::Application.routes.draw do
 
+  get "afiliacion/index"
   resources :audios
 
   resources :temas
