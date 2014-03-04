@@ -1,5 +1,7 @@
 Soniem::Application.routes.draw do
 
+  resources :informaciones
+
   resources :fotografias
 
   resources :imagenes

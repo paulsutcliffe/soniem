@@ -1,0 +1,22 @@
+= form_for @informacion, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @informacion.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@informacion.errors.count, "error")}"
+      %ul
+        - @informacion.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :titulo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :titulo, class: 'form-control'
+  .form-group
+    = f.label :foto, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :foto, class: 'form-control'
+  .form-group
+    = f.label :descripcion, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :descripcion, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'

@@ -1,0 +1,30 @@
+#region-informaciones.container
+
+  .region
+    .region-title
+      %h1= page_title!('informaciones')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Informacion', new_informacion_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Titulo
+            %th Foto
+            %th Descripcion
+            %th
+            %th
+            %th
+
+          - @informaciones.each do |informacion|
+            %tr
+              %td= informacion.titulo
+              %td= informacion.foto
+              %td= informacion.descripcion
+              %td= link_to 'Ver', informacion, class: 'btn btn-info'
+              - if current_admin
+                %td= link_to 'Editar', edit_informacion_path(informacion), class: 'btn btn-success'
+                %td= link_to 'Eliminar', informacion, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
