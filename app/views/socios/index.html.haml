@@ -27,7 +27,7 @@
             %tr
               %td= socio.nombre
               %td= socio.contenido
-              %td= image_tag socio.fotografia_url(:medium)
+              %td= image_tag socio.fotografias.first.fotografia_url(:medium) if socio.fotografias.first
               %td= socio.web
               %td= socio.twitter
               %td= socio.facebook

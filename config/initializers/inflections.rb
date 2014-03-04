@@ -10,6 +10,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.irregular 'ubicacion', 'ubicaciones'
   inflect.irregular 'tema', 'temas'
   inflect.irregular 'imagen', 'imagenes'
+  inflect.irregular 'fotografia', 'fotografias'
 #   inflect.uncountable %w( fish sheep )
 end
 

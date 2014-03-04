@@ -1,0 +1,26 @@
+#region-fotografias.container
+
+  .region
+    .region-title
+      %h1= page_title!('fotografias')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Fotografia', new_fotografia_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Fotografia
+            %th
+            %th
+            %th
+
+          - @fotografias.each do |fotografia|
+            %tr
+              %td= fotografia.fotografia
+              %td= link_to 'Ver', fotografia, class: 'btn btn-info'
+              - if current_admin
+                %td= link_to 'Editar', edit_fotografia_path(fotografia), class: 'btn btn-success'
+                %td= link_to 'Eliminar', fotografia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

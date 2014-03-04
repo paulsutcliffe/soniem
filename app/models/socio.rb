@@ -4,5 +4,7 @@ class Socio < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  mount_uploader :fotografia, FotografiaUploader
+  has_many :fotografias
+
+  accepts_nested_attributes_for :fotografias
 end

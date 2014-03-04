@@ -12,7 +12,8 @@
       = @socio.contenido
     %p
       %b Fotografia:
-      = @socio.fotografia
+      - @socio.fotografias.each do |fotografia|
+        = image_tag fotografia.fotografia_url(:medium)
     %p
       %b Web:
       = @socio.web

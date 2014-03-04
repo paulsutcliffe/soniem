@@ -1,4 +1,6 @@
-= form_for @socio, :html => { class: 'form-horizontal', role: 'form' } do |f|
+- content_for :javascript do
+  = javascript_include_tag 'nested_form.js'
+= nested_form_for @socio, :html => { class: 'form-horizontal', role: 'form' } do |f|
   - if @socio.errors.any?
     #error_explanation
       %h2= "#{pluralize(@socio.errors.count, "error")}"
@@ -14,10 +16,15 @@
     = f.label :contenido, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.text_area :contenido, class: 'form-control'
+  = f.fields_for :fotografias do |fotografia_form|
+    .form-group
+      = f.label 'Fotografias', class: 'col-sm-2 control-label'
+      .col-sm-8
+        = fotografia_form.file_field :fotografia, class: 'form-control'
+      .col-sm-2
+        = fotografia_form.link_to_remove "Eliminar Fotografia", class: 'btn btn-danger'
   .form-group
-    = f.label :fotografia, class: 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_field :fotografia, class: 'form-control'
+    = f.link_to_add "Agregar Fotografía", :fotografias, class: 'btn btn-primary'
   .form-group
     = f.label :web, class: 'col-sm-2 control-label'
     .col-sm-10

@@ -4,7 +4,6 @@ FactoryGirl.define do
   factory :socio do
     nombre { Faker::Name.name }
     contenido { Faker::Lorem.paragraph }
-    fotografia { Rack::Test::UploadedFile.new(File.join(Rails.root,'features','support','foto_directivo1.jpg'))}
     web { Faker::Internet.url }
     twitter { Faker::Internet.url }
     facebook { Faker::Internet.url }
