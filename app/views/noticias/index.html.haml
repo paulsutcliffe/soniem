@@ -24,7 +24,7 @@
             %tr
               %td= noticia.titulo
               %td= noticia.fecha
-              %td= image_tag noticia.imagen_url(:thumb)
+              %td= image_tag noticia.imagenes.first.imagen_url(:thumb) if noticia.imagenes.first
               %td= noticia.contenido
               %td= link_to 'Ver', noticia, class: 'btn btn-info'
               - if current_admin

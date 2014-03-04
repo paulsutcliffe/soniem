@@ -1,3 +1,5 @@
 class Noticia < ActiveRecord::Base
-  mount_uploader :imagen, ImagenUploader
+  has_many :imagenes
+
+  accepts_nested_attributes_for :imagenes
 end

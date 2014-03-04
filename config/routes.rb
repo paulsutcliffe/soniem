@@ -1,5 +1,7 @@
 Soniem::Application.routes.draw do
 
+  resources :imagenes
+
   get "afiliacion/index"
   resources :audios
 

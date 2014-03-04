@@ -1,0 +1,18 @@
+- page_title!('Editando imagen')
+
+#region-imagenes.container
+
+  .region
+    .region-title
+      %h1
+        Editando
+        %b
+          imagen
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Ver', @imagen, class: 'btn btn-info'
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

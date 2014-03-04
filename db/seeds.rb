@@ -23,7 +23,7 @@ end
 end
 
 10.times do
-  FactoryGirl.create :noticia
+  FactoryGirl.create :imagen
 end
 
 10.times do

@@ -1,0 +1,26 @@
+#region-imagenes.container
+
+  .region
+    .region-title
+      %h1= page_title!('imagenes')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Imagen', new_imagen_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Imagen
+            %th
+            %th
+            %th
+
+          - @imagenes.each do |imagen|
+            %tr
+              %td= imagen.imagen
+              %td= link_to 'Ver', imagen, class: 'btn btn-info'
+              - if current_admin
+                %td= link_to 'Editar', edit_imagen_path(imagen), class: 'btn btn-success'
+                %td= link_to 'Eliminar', imagen, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

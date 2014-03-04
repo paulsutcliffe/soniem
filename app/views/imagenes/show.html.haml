@@ -1,0 +1,15 @@
+#region-imagenes.container
+  .region
+    .region-title
+      %h1= page_title!('imagen')
+
+  .region
+    %p
+      %b Imagen:
+      = @imagen.imagen
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_imagen_path(@imagen), class: 'btn btn-success'
+    = link_to 'Regresar', imagenes_path, class: 'btn btn-warning'
