@@ -35,7 +35,15 @@ end
 end
 
 10.times do
+  FactoryGirl.create :informacion
+end
+
+10.times do
   FactoryGirl.create :evento
+end
+
+4.times do
+  FactoryGirl.create :formato
 end
 
 10.times do

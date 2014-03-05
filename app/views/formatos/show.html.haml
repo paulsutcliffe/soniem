@@ -1,0 +1,18 @@
+#region-formatos.container
+  .region
+    .region-title
+      %h1= page_title!('formato')
+
+  .region
+    %p
+      %b Pdf:
+      = @formato.pdf
+    %p
+      %b Titulo:
+      = @formato.titulo
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_formato_path(@formato), class: 'btn btn-success'
+    = link_to 'Regresar', formatos_path, class: 'btn btn-warning'
