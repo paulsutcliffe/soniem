@@ -1,0 +1,18 @@
+= form_for @pregunta, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @pregunta.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@pregunta.errors.count, "error")}"
+      %ul
+        - @pregunta.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :pregunta, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :pregunta, class: 'form-control'
+  .form-group
+    = f.label :respuesta, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :respuesta, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'

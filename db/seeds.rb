@@ -50,6 +50,10 @@ end
   FactoryGirl.create :tema
 end
 
+8.times do
+  FactoryGirl.create :pregunta
+end
+
 10.times do
   FactoryGirl.create :audio
 end

@@ -1,5 +1,7 @@
 Soniem::Application.routes.draw do
 
+  resources :preguntas
+
   resources :formatos
 
   resources :informaciones
