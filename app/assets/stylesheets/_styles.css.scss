@@ -1,0 +1,80 @@
+/*HEADER*/
+
+#region-header-information{
+  background-color: $black;
+  color: white;
+  padding: 3px 0px;
+  text-align: right;
+  .container div{
+    display:inline-block;
+    margin-right: 10px;
+  }
+  .socios{text-transform: uppercase; background-color: $red; padding:6px 20px;}
+
+}
+
+#navigation{
+  background-color: white;
+  .navbar-nav{
+    margin: 3em 0 0 7em;
+  }
+  ul li a{
+  color: $black;
+  }
+
+  ul li:hover{
+  border-bottom: 2px solid $red;
+  }
+
+  ul li a:hover{
+  background-color: white;
+  color: $red;
+  }
+
+}
+
+#region-Inicio{
+  .region-inicio-info{
+    .quienes-somos{
+      p{display: inline-block;}
+      .arrow{
+      float: left;
+      margin-right: 10px;
+      margin-top: 5px;
+      }
+      .info{
+      width: 410px;
+      }
+    }
+    .noticias{
+      .info-noticias{
+      display: inline-block;
+      width: 48%;
+      float:left;
+      }
+      .noticias-left{
+      background-color: white;
+      a{color: $red;}
+      padding-left: 5px;
+      min-height: 256px;
+      max-height: 256px;
+      }
+      .noticias-right{
+        .triangulo{position:absolute; z-index: 5; 
+        margin-left:-1px;}
+      }
+    }
+  }
+
+  .region-inicio-eventos{
+    .evento{background-color: white;
+      
+      .fecha span{
+        font-size: 4em;
+      }
+    }
+  }
+}
+
+
+

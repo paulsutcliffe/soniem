@@ -1,8 +1,70 @@
-#region-Inicio.container
-  .region
-    .region-title
-      %h1= page_title!('index')
+#region-Inicio
+  .container-slider
+    = render 'bootstrap3_carousel'
+  .container
+    .region-inicio-info
+      %h1
+        Que &Eacute;s
+        %span
+          Soniem
+        ?
+      .quienes-somos
+        %p.arrow
+          =image_tag image_path('red-arrow.png'), class: 'img-responsive'
+        %p.info
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
 
-  .region
-    .container-slider
-      = render 'bootstrap3_carousel'
+          A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+
+          Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas.
+    .region-inicio-info
+      %h1
+        &Uacute;ltimas
+        %span
+          Noticias
+      .noticias
+        .info-noticias.noticias-left
+          %h5
+            Autorización de funcionamiento como sociedad de gestión colectiva.
+          %p
+            A small river named Duden flows by their place and supplies it with the necessary regelialia...
+          =link_to 'www.google.com' do
+            leer m&aacute;s
+            =image_tag image_path('circle-arrow.png') 
+        .info-noticias.noticias-right
+          =image_tag image_path('white-triangle.png'), class: 'triangulo'
+          =image_tag image_path('noticias-img.png'), class: 'img-responsive'
+      
+    %h1
+      Nuestros
+      %span
+        asociados
+  .container-banner
+    =image_tag image_path(''), class: 'img-responsive'
+  .container
+    .region-inicio-social
+      %h1
+        S&iacute;guenos en
+        %span
+          facebook
+    .region-inicio-eventos
+      %h1
+        pr&oacute;ximos
+        %span
+          eventos
+      .evento
+        .fecha
+          %span
+            20
+          %br
+            Diciembre
+        .descripcion
+          .titulo
+            %p
+              Titulo del evento
+          .lugar
+            %p
+              Lugar del evento
+  .container-slider
+    = render 'bootstrap3_carousel_2'
+  .container-footer

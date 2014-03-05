@@ -45,9 +45,11 @@
 
   %body
     %header{:role => "navigation"}
+      = render 'layouts/information'
       = render 'layouts/navigation'
     %main{:role => "main"}
       = render 'layouts/messages'
       = yield
+      = render 'layouts/footer'
     = render 'shared/google_analytics'
 

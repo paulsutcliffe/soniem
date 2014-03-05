@@ -1,0 +1,19 @@
+
+.region-inicio-info{
+@extend .col-md-6;
+@extend .col-lg-6;
+@extend .col-sm-6;
+@extend .col-xs-12;
+}
+.region-inicio-social{
+@extend .col-md-8;
+@extend .col-lg-8;
+@extend .col-sm-8;
+@extend .col-xs-12;
+}
+.region-inicio-eventos{
+@extend .col-md-4;
+@extend .col-lg-4;
+@extend .col-sm-4;
+@extend .col-xs-12;
+}
