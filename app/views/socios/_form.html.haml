@@ -8,6 +8,18 @@
         - @socio.errors.full_messages.each do |msg|
           %li= msg
 
+    .form-group
+      = f.label :email, class: 'col-sm-2 control-label'
+      .col-sm-10
+        = f.email_field :email, :autofocus => true, class: 'form-control'  
+    .form-group
+      = f.label :password, "Contraseña", class: 'col-sm-2 control-label' 
+      .col-sm-10
+        = f.password_field :password, class: 'form-control'
+    .form-group
+      = f.label :password_confirmation, "Confirmar Contraseña", class: 'col-sm-2 control-label' 
+      .col-sm-10
+        = f.password_field :password_confirmation, class: 'form-control'
   .form-group
     = f.label :nombre, class: 'col-sm-2 control-label'
     .col-sm-10

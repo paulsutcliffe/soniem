@@ -19,6 +19,7 @@
     margin: 3em 0 0 7em;
   }
   ul li a{
+  text-transform: uppercase;
   color: $black;
   }
 
@@ -33,17 +34,37 @@
 
 }
 
+#carousel-generic-2 {
+    background-image: url("/assets/background-image.png");
+      background-position: center center;
+        background-repeat: no-repeat;
+          background-size: cover;
+            height: 27em;
+              width: 100%;
+
+.carousel-caption{font-style: italic; font-weight: 300;left: 0px; right: 0px; position: relative !important;
+p{
+margin-top: 40px;
+}
+}
+            }
+
+.carousel-inner{
+.active img{
+width:100%;
+}
+}
+
+
 #region-Inicio{
   .region-inicio-info{
+    h1{margin-bottom: 20px;}
+    margin-top: 30px;
+    margin-bottom: 50px;
     .quienes-somos{
-      p{display: inline-block;}
       .arrow{
-      float: left;
-      margin-right: 10px;
-      margin-top: 5px;
       }
       .info{
-      width: 410px;
       }
     }
     .noticias{
@@ -55,7 +76,7 @@
       .noticias-left{
       background-color: white;
       a{color: $red;}
-      padding-left: 5px;
+      padding-left: 15px;
       min-height: 256px;
       max-height: 256px;
       }
@@ -65,16 +86,56 @@
       }
     }
   }
-
   .region-inicio-eventos{
-    .evento{background-color: white;
-      
+    margin-bottom: 20px;
+    .evento{background-color: white;height: 9em;padding-top: 10px;
       .fecha span{
         font-size: 4em;
       }
+      .descripcion{
+        margin-top: 30px;
+      }
     }
+  }
+
+  .container-banner {
+    margin-top: 30px;
+    }
+
+  .region-facebook{
+  background-color:white;
+  }
+}
+
+/*Cuerpo*/
+
+/*General*/
+.title{
+background-color: white;
+color: $gray;
+padding: 30px 20px;
+}
+
+.admin-control{margin-bottom: 10px;}
+
+/*Socios*/
+#region-socios{
+  .region-socios-background{background-color: white;}
+  .region-socios{
+    background-color: #D4D4D4;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 10px;
+    img{margin-right: 10px;}
+  }
+  .region-socios > a{
+  text-transform: capitalize;
   }
 }
 
 
-
+#footer{
+  padding: 10px 5px;
+}

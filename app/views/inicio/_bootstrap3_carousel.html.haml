@@ -10,13 +10,13 @@
     - @slides.each_with_index do |slide, index|
       - if index == 0
         .item.active
-          = image_tag slide.imagen_url(:full)
+          = image_tag slide.imagen_url(:full), class:'img-responsive'
           .carousel-caption
             %p
               = slide.titulo if slide.titulo
       - else
         .item
-          = image_tag slide.imagen_url(:full)
+          = image_tag slide.imagen_url(:full), class: 'img-responsive'
           .carousel-caption
             %p
               = slide.titulo if slide.titulo

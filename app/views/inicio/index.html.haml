@@ -4,6 +4,7 @@
   .container
     .region-inicio-info
       %h1
+        &iquest;
         Que &Eacute;s
         %span
           Soniem
@@ -35,11 +36,12 @@
           =image_tag image_path('white-triangle.png'), class: 'triangulo'
           =image_tag image_path('noticias-img.png'), class: 'img-responsive'
       
-    %h1
-      Nuestros
-      %span
-        asociados
   .container-banner
+    .container
+      %h1
+        Nuestros
+        %span
+          asociados
     =image_tag image_path(''), class: 'img-responsive'
   .container
     .region-inicio-social
@@ -47,6 +49,8 @@
         S&iacute;guenos en
         %span
           facebook
+      .region-facebook
+        = render 'facebook'
     .region-inicio-eventos
       %h1
         pr&oacute;ximos
@@ -65,6 +69,6 @@
           .lugar
             %p
               Lugar del evento
-  .container-slider
+  .container-slider.slider-footer
     = render 'bootstrap3_carousel_2'
   .container-footer
