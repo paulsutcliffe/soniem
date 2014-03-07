@@ -2,29 +2,29 @@
 
   .region
     .region-title
-      %h1= page_title!('comunicados')
+      %h1.title
+        = page_title!('comunicados')
 
     .region
       - if current_admin
         .admin-control
           = link_to 'Crear Comunicado', new_comunicado_path, class: 'btn btn-primary'
 
-      .table-responsive
-        %table.table
-          %tr
-            %th Titulo
-            %th Contenido
-            %th Fecha
-            %th
-            %th
-            %th
-
-          - @comunicados.each do |comunicado|
-            %tr
-              %td= comunicado.titulo
-              %td= comunicado.contenido
-              %td= comunicado.fecha
-              %td= link_to 'Ver', comunicado, class: 'btn btn-info'
+      - @comunicados.each do |comunicado|
+        .region-comunicados
+          = link_to comunicado do
+            .white
+              = comunicado.titulo
+              = comunicado.contenido
+              -#%br  
+              -#= comunicado.fecha
+              %br
+              %br
+              .leer-mas
+                %span
+                  leer m&aacute;s
+                =image_tag image_path('circle-arrow.png') 
+              
               - if current_admin
-                %td= link_to 'Editar', edit_comunicado_path(comunicado), class: 'btn btn-success'
-                %td= link_to 'Eliminar', comunicado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+                = link_to 'Editar', edit_comunicado_path(comunicado), class: 'btn btn-success'
+                =  link_to 'Eliminar', comunicado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

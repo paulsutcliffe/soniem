@@ -1,5 +1,5 @@
 
-.region-inicio-info{
+.region-inicio-info, .form-group-1, .form-group-2{
 @extend .col-md-6;
 @extend .col-lg-6;
 @extend .col-sm-6;
@@ -11,7 +11,7 @@
 @extend .col-sm-8;
 @extend .col-xs-12;
 }
-.region-inicio-eventos{
+.region-inicio-eventos, .region-comunicados, .region-noticias{
 @extend .col-md-4;
 @extend .col-lg-4;
 @extend .col-sm-4;
@@ -29,17 +29,17 @@
 @extend .col-sm-9;
 @extend .col-xs-9;
 }
-.region-inicio-info .arrow{
-@extend .col-md-3;
-@extend .col-lg-3;
-@extend .col-sm-3;
-@extend .col-xs-3;
+.arrow{
+@extend .col-md-2;
+@extend .col-lg-2;
+@extend .col-sm-2;
+@extend .col-xs-2;
 }
-.region-inicio-info .info{
-@extend .col-md-8;
-@extend .col-lg-8;
-@extend .col-sm-8;
-@extend .col-xs-8;
+.info{
+@extend .col-md-10;
+@extend .col-lg-10;
+@extend .col-sm-10;
+@extend .col-xs-10;
 }
 
 .region-socios-background{
@@ -48,3 +48,15 @@
 @extend .col-sm-6;
 @extend .col-xs-12;
 }
+
+
+.region-afiliacion{
+.region{
+@extend .col-md-6;
+@extend .col-lg-6;
+@extend .col-sm-6;
+@extend .col-xs-6;
+}
+}
+
+

@@ -75,14 +75,12 @@ width:100%;
       }
       .noticias-left{
       background-color: white;
-      a{color: $red;}
       padding-left: 15px;
       min-height: 256px;
       max-height: 256px;
       }
       .noticias-right{
-        .triangulo{position:absolute; z-index: 5; 
-        margin-left:-1px;}
+      .triangulo{position:absolute; z-index: 5; margin-left:-1px;}
       }
     }
   }
@@ -110,22 +108,26 @@ width:100%;
 /*Cuerpo*/
 
 /*General*/
+
+.region-title{
+margin-bottom: 15px;
+}
 .title{
 background-color: white;
 color: $gray;
 padding: 30px 20px;
 }
-
+.leer-mas{span{color:$red;}}
+.region-title{padding-left: 15px; padding-right: 15px;}
+.white{background-color: white;}
 .admin-control{margin-bottom: 10px;}
 
 /*Socios*/
 #region-socios{
-  .region-socios-background{background-color: white;}
   .region-socios{
-    background-color: #D4D4D4;
-    margin-left: 20px;
+    background-color: white;
     margin-top: 20px;
-    width: 90%;
+    width: 100%;
     padding: 20px;
     margin-bottom: 10px;
     img{margin-right: 10px;}
@@ -135,6 +137,72 @@ padding: 30px 20px;
   }
 }
 
+/*COMUNICADOS*/
+
+.region-comunicados{
+height: 180px;
+margin-top: 15px;
+margin-bottom: 15px;
+.white{
+  color: $gray;
+  padding: 20px;
+  height: 180px;
+}
+.leer-mas{
+  bottom: 10px;
+  position: absolute;
+  }
+}
+
+
+/*Ubicacion*/
+.region-ubicacion-info{
+  width: 50%;
+  margin: 20px auto 30px;
+  background-color: white;
+  text-align: center;
+
+  img{diplay: inline-block; vertical-align: baseline; margin-right: 10px;}
+  h3{width: 276px; display: inline-block; text-align: left;}
+}
+
+/*Contactos*/
+#region-contactos{
+.region-form-contacto{
+  margin: 0 auto 20px;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  width:70%;
+}
+.region-contactos-info{
+background-color: white;
+width: 70%;
+margin: 20px auto;
+text-align: center;
+
+img{diplay: inline-block; vertical-align: baseline; margin-right: 10px;}
+h3{width: 350px; display: inline-block; text-align: left;}
+}
+label{margin-bottom: 5px;}
+.btn{color: $red; border: 1px solid $red; text-align: right;}
+.actions {margin-right: 20px; text-align: right;}
+.form-group{width: 100%;}
+}
+
+/*NOTICIAS*/
+.region-noticias{
+margin-bottom: 30px;
+.triangulo{position:absolute; margin-left: 25px;margin-top: -19px;}
+.region-noticias-info{
+background-color: white;
+height: 100px;
+padding: 20px;
+img{display:inline-block;vertical-align: top;}
+}
+h5{width:80%; display: inline-block;}
+}
 
 #footer{
   padding: 10px 5px;

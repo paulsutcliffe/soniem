@@ -4,14 +4,23 @@
 
   .region
     .region-title
-      %h1
-        Creando
-        %b
-          contacto
-
-  .region
+      %h1.title
+        contacto
+  .region-contactos-info
+    = image_tag image_path('clip.png')
+    %h3
+      .datos
+        t&eacute;lefono: 
+        %span
+          12345678
+        %br
+        celulares:
+        %span
+          988765421
+        %br
+        e-mail:
+        %span
+          info@soniemperu.com
+  .region-form-contacto.white
     = render 'form'
 
-  .region
-    .admin-controls
-      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

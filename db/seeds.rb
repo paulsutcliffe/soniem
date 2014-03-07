@@ -58,4 +58,6 @@ end
   FactoryGirl.create :audio
 end
 
-Ubicacion.create(direccion: 'Estadio Municipal de La Molina', lat: 123 , lng: 123)
+Ubicacion.create(direccion: 'AV. ANDRÉS RAZURI  206
+                 URB. MARANGA, SAN MIGUEL
+                 LIMA - PERÚ', lat: 123 , lng: 123)
