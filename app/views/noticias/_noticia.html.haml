@@ -1,0 +1,12 @@
+.region-noticias
+  = link_to noticia do 
+    = image_tag noticia.imagenes.first.imagen_url(:medium), class: 'img-responsive' if noticia.imagenes.first
+    = image_tag image_path('white-triangle-up.png'), class: 'triangulo'
+    .region-noticias-info
+      %h5= noticia.titulo
+      = image_tag image_path('circle-arrow.png')
+  -#= noticia.fecha
+  -#= noticia.contenido
+  - if current_admin
+    = link_to 'Editar', edit_noticia_path(noticia), class: 'btn btn-success'
+    = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

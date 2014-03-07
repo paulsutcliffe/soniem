@@ -22,7 +22,7 @@ end
   FactoryGirl.create :slide
 end
 
-10.times do
+45.times do
   FactoryGirl.create :imagen
 end
 

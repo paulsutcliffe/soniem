@@ -2,6 +2,9 @@ class NoticiasController < InheritedResources::Base
   def permitted_params
     params.permit(:noticia => [:titulo, :fecha, :contenido, :imagen, imagenes_attributes: [:id, :imagen, :_destroy]])
   end
+  def index
+    @noticias = Noticia.page(params[:id])
+  end
   def create
     create!( notice: "Noticia creada con éxito."){ noticias_path }
   end

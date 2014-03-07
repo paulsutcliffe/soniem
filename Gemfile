@@ -43,6 +43,7 @@ gem "capistrano", group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'kaminari'
 gem "nested_form"
 gem "bootstrap-sass", "~> 3.0.3.0"
 gem "compass-rails", group: :assets
