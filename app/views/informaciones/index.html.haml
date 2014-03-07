@@ -13,16 +13,14 @@
         %table.table
           %tr
             %th Titulo
-            %th Foto
-            %th Descripcion
             %th
             %th
 
           - @informaciones.each do |informacion|
             %tr
-              %td= informacion.titulo
-              %td= informacion.foto
-              %td= informacion.descripcion
+              %td= link_to informacion.titulo, informacion, remote: true
               - if current_admin
                 %td= link_to 'Editar', edit_informacion_path(informacion), class: 'btn btn-success'
                 %td= link_to 'Eliminar', informacion, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+    .region
+      = render @informacion

@@ -1,0 +1,14 @@
+#informacion
+  %ul.top-nav
+    - if @informacion.siguiente_informacion
+      %li
+        = link_to '>', @informacion.siguiente_informacion, remote: true
+    - if @informacion.informacion_anterior
+      %li
+        = link_to '<', @informacion.informacion_anterior, remote: true
+  %h2.title= @informacion.titulo
+
+  %p
+    = @informacion.descripcion
+  %br
+    = image_tag @informacion.foto_url(:full)
