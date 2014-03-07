@@ -14,7 +14,7 @@
     - @noticias.each do |noticia|
       .region-noticias
         = link_to noticia do 
-          = image_tag noticia.imagenes.first.imagen_url(:thumb), class: 'img-responsive' if noticia.imagenes.first
+          = image_tag noticia.imagenes.first.imagen_url(:medium), class: 'img-responsive' if noticia.imagenes.first
           = image_tag image_path('white-triangle-up.png'), class: 'triangulo'
           .region-noticias-info
             %h5= noticia.titulo

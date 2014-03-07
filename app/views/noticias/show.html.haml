@@ -13,7 +13,7 @@
     %p
       %b Imagen:
       - @noticia.imagenes.each do |imagen|
-        = image_tag imagen.imagen_url(:thumb)
+        = image_tag imagen.imagen_url(:full)
     %p
       %b Contenido:
       = @noticia.contenido
