@@ -17,3 +17,5 @@
 //= require bootstrap
 //= require audio.min.js
 //= require jquery_nested_form
+//= require jquery.infinitescroll
+//= require noticias.js.coffee

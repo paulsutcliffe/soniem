@@ -59,19 +59,20 @@
         %span
           eventos
       - @eventos.each do |evento|
-        .evento
-          .fecha
-            %span
-              = evento.fecha.day
-            %br
-              = evento.fecha.strftime("%B")
-          .descripcion
-            .titulo
-              %p
-                = evento.titulo
-            .lugar
-              %p
-                = evento.lugar
+        = link_to evento do
+          .evento
+            .fecha
+              %span
+                = evento.fecha.day
+              %br
+                = evento.fecha.strftime("%B")
+            .descripcion
+              .titulo
+                %p
+                  = evento.titulo.truncate(50)
+              .lugar
+                %p
+                  = evento.lugar
   .container-slider.slider-footer
     = render 'bootstrap3_carousel_2'
   .container-footer
