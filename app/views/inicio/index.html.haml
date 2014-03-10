@@ -58,19 +58,20 @@
         pr&oacute;ximos
         %span
           eventos
-      .evento
-        .fecha
-          %span
-            20
-          %br
-            Diciembre
-        .descripcion
-          .titulo
-            %p
-              Titulo del evento
-          .lugar
-            %p
-              Lugar del evento
+      - @eventos.each do |evento|
+        .evento
+          .fecha
+            %span
+              = evento.fecha.day
+            %br
+              = evento.fecha.strftime("%B")
+          .descripcion
+            .titulo
+              %p
+                = evento.titulo
+            .lugar
+              %p
+                = evento.lugar
   .container-slider.slider-footer
     = render 'bootstrap3_carousel_2'
   .container-footer
