@@ -108,7 +108,7 @@ width:100%;
 /*Cuerpo*/
 
 /*General*/
-
+.clear{clear:both;}
 .region-title{
 margin-bottom: 15px;
 }
@@ -134,6 +134,25 @@ padding: 30px 20px;
   }
   .region-socios > a{
   text-transform: capitalize;
+  }
+  .contacto{span{color: $red;}}
+
+  .region-inicio-eventos{
+    margin-bottom: 20px;
+    .evento{background-color: white;height: 9em;padding-top: 10px;
+      .fecha span{
+        font-size: 4em;
+      }
+      .descripcion{
+        margin-top: 30px;
+      }
+    }
+  }
+  .audiojs{margin-bottom: 10px;}
+  .table{
+  text-align: center;
+  .title{font-size: 2em; font-weight:lighter;}
+  .name{width:50%; text-align: left;}
   }
 }
 
@@ -203,7 +222,40 @@ img{display:inline-block;vertical-align: top;}
 }
 h5{width:80%; display: inline-block;}
 }
+.region-comentarios{margin-top: 5em; margin-bottom: 3em;}
+.arrow{margin-top: 5px;}
+.info {font-family: 'Muli';
+  .compartir{ font-family: 'Oswald'; margin-top: 20px;span{color: $red;}}
+}
 
 #footer{
   padding: 10px 5px;
+}
+
+/*DIRECTIVOS*/
+#region-directivos{
+.director{
+        margin-bottom: 50px;
+            margin-top: 70px;
+                padding-bottom: 10px;
+                    text-align: center;
+  img{
+      margin-top: -50px;
+ }
+ .sub{
+  padding-bottom: 30px;
+ }
+}
+}
+
+/*INFORMACIONES*/
+#region-informaciones{
+.region-informacion{padding-right: 30px;}
+.region-sidebar{
+  
+  .sidebar-links{
+    display: inline-block;
+  }
+}
+
 }

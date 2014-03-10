@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+//= require audio.min.js
 //= require jquery_nested_form

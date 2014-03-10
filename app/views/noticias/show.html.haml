@@ -1,25 +1,31 @@
 #region-noticias.container
   .region
     .region-title
-      %h1= page_title!('noticia')
+      %h1.title
+        = page_title!(@noticia.titulo)
 
-  .region
-    %p
-      %b Titulo:
-      = @noticia.titulo
-    %p
-      %b Fecha:
-      = @noticia.fecha
-    %p
-      %b Imagen:
-      - @noticia.imagenes.each do |imagen|
-        = image_tag imagen.imagen_url(:full)
-    %p
-      %b Contenido:
+  .region-info-noticia
+    .arrow
+      =image_tag image_path('red-arrow.png'), class: 'img-responsive'
+    .info
       = @noticia.contenido
+      .compartir
+        =link_to 'www.facebook.com' do
+          %span
+            COMPARTIR
+          =image_tag image_path ('facebook-share.png')
 
+  .region-img-noticia  
+    %p
+      - @noticia.imagenes.each do |imagen|
+        = image_tag imagen.imagen_url(:full), class: 'img-responsive'
+
+  .clear
+  .region-comentarios
+    %h2.titulo
+      COMENTARIOS
+    =render 'fb_plugin'
   .region
     - if current_admin
       .admin-controls
         = link_to 'Editar', edit_noticia_path(@noticia), class: 'btn btn-success'
-    = link_to 'Regresar', noticias_path, class: 'btn btn-warning'

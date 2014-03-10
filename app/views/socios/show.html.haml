@@ -1,32 +1,96 @@
+:javascript
+  audiojs.events.ready(function() {var as = audiojs.createAll();});
+
 #region-socios.container
   .region
     .region-title
-      %h1= page_title!('socio')
+      %h1.title
+        = page_title!(@socio.nombre)
 
   .region
-    %p
-      %b Nombre:
-      = @socio.nombre
-    %p
-      %b Contenido:
-      = @socio.contenido
-    %p
-      %b Fotografia:
+    .region-socios-img
       - @socio.fotografias.each do |fotografia|
-        = image_tag fotografia.fotografia_url(:medium)
-    %p
-      %b Web:
-      = @socio.web
-    %p
-      %b Twitter:
-      = @socio.twitter
-    %p
-      %b Facebook:
-      = @socio.facebook
-    %p
-      %b Soundcloud:
-      = @socio.soundcloud
+        = image_tag fotografia.fotografia_url(:medium), class: 'img-responsive'
+      .contacto
+        %span
+          CONTACTO 
+          =mail_to 'info@hotmail.com' do 
+            =image_tag (image_path('red-mail.png'))
+          =link_to '' do
+            =image_tag (image_path('facebook-share.png'))
+    .region-socios-info
+      .arrow
+        = image_tag image_path ('red-arrow.png')
+      %p.info
+        = @socio.contenido
+      -#= @socio.web
+      -#= @socio.twitter
+      -#= @socio.facebook
+      -#= @socio.soundcloud
+    .clear
 
+    .region-temas
+      %h2.titulo
+        %span
+          TEMAS REPRESENTATIVOS
+        DEL INTERPRETE
+      .socios-canciones
+        %audio{:src => "mp3/audio", :preload => "auto"}
+        %audio{:src => "mp3/audio", :preload => "auto"}
+        %audio{:src => "mp3/audio", :preload => "auto"}
+    .region-evento.region-inicio-eventos
+      %h2.titulo
+        PR&Oacute;XIMOS
+        %span
+          EVENTOS
+      .evento
+        .fecha
+          %span
+            20
+          %br
+            Diciembre
+        .descripcion
+          .titulo
+            %p
+              Titulo del evento
+          .lugar
+            %p
+              Lugar del evento
+    .clear
+      
+    .region-list
+      %h2.titulo
+        LISTA DE OBRAS
+      .table-responsive
+        %table.table.table-striped
+          %tr
+            %td.title.name
+              Tìtulo
+            %td.title
+              A&ntilde;o
+            %td.title
+              Duraci&oacute;n
+            %td.title
+              Formato
+          %tr
+            %td.name
+              Mi marimba
+            %td
+              1997
+            %td
+              3:20
+            %td
+              Quinteto
+
+          %tr
+            %td.name
+              Mi marimba
+            %td
+              1997
+            %td
+              3:20
+            %td
+              Quinteto
   .region
     - if current_admin
       .admin-controls

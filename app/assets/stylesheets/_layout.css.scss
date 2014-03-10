@@ -1,5 +1,6 @@
 
-.region-inicio-info, .form-group-1, .form-group-2{
+.region-inicio-info, .form-group-1, .form-group-2,
+.region-socios-background, .region-info-noticia, .region-img-noticia, {
 @extend .col-md-6;
 @extend .col-lg-6;
 @extend .col-sm-6;
@@ -42,21 +43,47 @@
 @extend .col-xs-10;
 }
 
-.region-socios-background{
-@extend .col-md-6;
-@extend .col-lg-6;
-@extend .col-sm-6;
-@extend .col-xs-12;
-}
 
-
-.region-afiliacion{
-.region{
+.director, .region-afiliacion .region{
 @extend .col-md-6;
 @extend .col-lg-6;
 @extend .col-sm-6;
 @extend .col-xs-6;
+
+}
+
+.region-sidebar, .region-socios-img{
+@extend .col-md-4;
+@extend .col-lg-4;
+@extend .col-sm-4;
+@extend .col-xs-4;
+} 
+
+.region-informacion, .region-socios-info{
+@extend .col-md-8;
+@extend .col-lg-8;
+@extend .col-sm-8;
+@extend .col-xs-8;
+}
+#region-socios{
+.region-temas{
+@extend .col-md-8;
+@extend .col-lg-8;
+@extend .col-sm-8;
+@extend .col-xs-8;
+}
+.region-evento{
+@extend .col-md-4;
+@extend .col-lg-4;
+@extend .col-sm-4;
+@extend .col-xs-4;
+
 }
 }
 
-
+.region-list{
+@extend .col-md-12;
+@extend .col-lg-12;
+@extend .col-sm-12;
+@extend .col-xs-12;
+}
