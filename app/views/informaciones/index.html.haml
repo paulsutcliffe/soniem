@@ -12,17 +12,9 @@
     
       - @informaciones.each do |informacion|
         = link_to informacion.titulo, informacion, remote: true, class: 'sidebar-links'
-      = link_to '#' ,'directivos',class: 'sidebar-links'
+      = link_to 'Directivos' , informaciones_directivos_path, remote: true , class: 'sidebar-links'
       - if current_admin
         = link_to 'Editar', edit_informacion_path(informacion), class: 'btn btn-success'
         = link_to 'Eliminar', informacion, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
-    .controls
-      %ul.top-nav
-        - if @informacion.informacion_anterior
-          %li
-            = link_to '<', @informacion.informacion_anterior, remote: true
-        - if @informacion.siguiente_informacion
-          %li
-            = link_to '>', @informacion.siguiente_informacion, remote: true
   .region-informacion
     = render @informacion
