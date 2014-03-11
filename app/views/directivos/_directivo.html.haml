@@ -8,10 +8,9 @@
       = directivo.cargo
     %p
       %b Foto:
-      = directivo.foto
+      = image_tag directivo.foto_url(:circle)
 
   .region
     - if current_admin
       .admin-controls
         = link_to 'Editar', edit_directivo_path(directivo), class: 'btn btn-success'
-    = link_to 'Regresar', directivos_path, class: 'btn btn-warning'

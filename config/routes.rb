@@ -6,6 +6,8 @@ Soniem::Application.routes.draw do
 
   get "informaciones/directivos"
 
+  get "informaciones/convenios"
+
   resources :informaciones
 
   resources :fotografias

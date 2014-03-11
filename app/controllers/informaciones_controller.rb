@@ -7,6 +7,7 @@ class InformacionesController < InheritedResources::Base
     @informaciones = Informacion.order("titulo DESC")
     @informacion = params[:informacion_id] ? Informacion.find(params[:informacion_id]) : Informacion.first
     @directivos = Directivo.all
+    @convenios = Convenio.all
   end
   
   def show
@@ -25,6 +26,15 @@ class InformacionesController < InheritedResources::Base
       format.js {}
 
       format.json { render json: @directivos }
+    end
+  end
+  def convenios
+    @convenios = Convenio.all
+    respond_to do |format|
+      #format.html
+      format.js {}
+
+      format.json { render json: @convenios}
     end
   end
 end

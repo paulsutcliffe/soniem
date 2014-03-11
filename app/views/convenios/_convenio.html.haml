@@ -1,0 +1,13 @@
+#region-convenios.container
+  .region
+    %p
+      %b Nombre:
+      = convenio.nombre
+    %p
+      %b Descripcion:
+      = convenio.descripcion
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_convenio_path(convenio), class: 'btn btn-success'
