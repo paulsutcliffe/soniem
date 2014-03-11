@@ -36,7 +36,7 @@ class FotoUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [220, 220]
   end
   version :circle do
-    process :resize_to_fit => [140, 140]
+    process :resize_to_fill => [140, 140]
   end
   version :full do
     process :resize_to_fill => [749, 644]

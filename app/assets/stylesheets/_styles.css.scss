@@ -121,7 +121,7 @@ padding: 30px 20px;
 .region-title{padding-left: 15px; padding-right: 15px;}
 .white{background-color: white;}
 .admin-control{margin-bottom: 10px;}
-
+.compartir{ font-family: 'Oswald'; margin-top: 20px;span{color: $red;}}
 /*Socios*/
 #region-socios{
   .region-socios{
@@ -224,9 +224,7 @@ h5{width:80%; display: inline-block;}
 }
 .region-comentarios{margin-top: 5em; margin-bottom: 3em;}
 .arrow{margin-top: 5px;}
-.info {font-family: 'Muli';
-  .compartir{ font-family: 'Oswald'; margin-top: 20px;span{color: $red;}}
-}
+.info {font-family: 'Muli';}
 
 #footer{
   padding: 10px 5px;
@@ -250,12 +248,37 @@ h5{width:80%; display: inline-block;}
 
 /*INFORMACIONES*/
 #region-informaciones{
-.region-informacion{padding-right: 30px;}
-.region-sidebar{
-  
-  .sidebar-links{
-    display: inline-block;
+  .region-informacion{
+    #informacion{
+    .title{margin-top: 0px;}
+    .informacion{margin-top: 30px;}
+    .compartir{}
+    }
   }
+  .region-sidebar{
+  .white{padding: 20px;}
+  .sidebar-links{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  }
+  .controls{margin-top: 40px;}
+  .controls .top-nav {padding-left: 0px;}
+  .controls .top-nav > li {list-style: none; display: inline-block; margin-right: 20px;}
+  .controls .top-nav > li a{padding: 20px; min-height: 20px; background: white; font-size: 20px;}
 }
 
+#region-preguntas{
+  .faqs{
+      padding-left: 15px;
+      width: 100%;
+    .answer{
+      font-family: 'Muli';
+      margin-bottom: 30px;
+    }
+    .question{
+    }
+  
+  }
 }

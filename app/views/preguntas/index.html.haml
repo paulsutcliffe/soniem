@@ -2,25 +2,18 @@
 
   .region
     .region-title
-      %h1= page_title!('preguntas')
+      %h1.title= page_title!('preguntas')
 
     .region
       - if current_admin
         .admin-control
           = link_to 'Crear Pregunta', new_pregunta_path, class: 'btn btn-primary'
-
-      .table-responsive
-        %table.table
-          %tr
-            %th Pregunta
-            %th Respuesta
-            %th
-            %th
-
-          - @preguntas.each do |pregunta|
-            %tr
-              %td= pregunta.pregunta
-              %td= pregunta.respuesta
-              - if current_admin
-                %td= link_to 'Editar', edit_pregunta_path(pregunta), class: 'btn btn-success'
-                %td= link_to 'Eliminar', pregunta, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+    .faqs  
+      - @preguntas.each_with_index do |pregunta, index|
+        %h4.question
+          = pregunta.pregunta
+        .answer  
+          = pregunta.respuesta
+        - if current_admin
+          = link_to 'Editar', edit_pregunta_path(pregunta), class: 'btn btn-success'
+          = link_to 'Eliminar', pregunta, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

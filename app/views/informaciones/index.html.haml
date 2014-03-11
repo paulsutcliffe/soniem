@@ -4,17 +4,25 @@
     .region-title
       %h1.title
         = page_title!('Quiénes somos?')
-  .container
-    .region-sidebar.white
+  .region-sidebar
+    .white
       - if current_admin
         .admin-control
           = link_to 'Crear Informacion', new_informacion_path, class: 'btn btn-primary'
-      
+    
       - @informaciones.each do |informacion|
         = link_to informacion.titulo, informacion, remote: true, class: 'sidebar-links'
-        - if current_admin
-          = link_to 'Editar', edit_informacion_path(informacion), class: 'btn btn-success'
-          = link_to 'Eliminar', informacion, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
-    
-    .region-informacion
-      = render @informacion
+      = link_to '#' ,'directivos',class: 'sidebar-links'
+      - if current_admin
+        = link_to 'Editar', edit_informacion_path(informacion), class: 'btn btn-success'
+        = link_to 'Eliminar', informacion, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+    .controls
+      %ul.top-nav
+        - if @informacion.informacion_anterior
+          %li
+            = link_to '<', @informacion.informacion_anterior, remote: true
+        - if @informacion.siguiente_informacion
+          %li
+            = link_to '>', @informacion.siguiente_informacion, remote: true
+  .region-informacion
+    = render @informacion
