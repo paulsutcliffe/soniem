@@ -11,5 +11,6 @@
           = link_to 'Crear Noticia', new_noticia_path, class: 'btn btn-primary'
     .region-inner
       #noticias
-        = render @noticias
-      = paginate @noticias
+        %ul.noticias-list
+          = render @noticias
+    = paginate @noticias

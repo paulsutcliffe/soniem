@@ -1,6 +1,6 @@
 
 $(document).ready ->
-  $("#noticias").infinitescroll
+  $("ul.noticias-list").infinitescroll
     loading: {
       finished: undefined,
       finishedMsg: null,
@@ -12,4 +12,4 @@ $(document).ready ->
     }
     navSelector: "nav.pagination" # selector for the paged navigation (it will be hidden)
     nextSelector: "nav.pagination a[rel=next]" # selector for the NEXT link (to page 2)
-    itemSelector: "#noticias @noticias" # selector for all items you'll retrieve
+    itemSelector: "ul.noticias-list li.noticia" # selector for all items you'll retrieve
