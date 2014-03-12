@@ -19,3 +19,4 @@
 //= require jquery_nested_form
 //= require jquery.infinitescroll
 //= require noticias.js.coffee
+//= require socios.js

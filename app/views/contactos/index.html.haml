@@ -2,17 +2,27 @@
 
   .region
     .region-title
-      %h1.title
-        = page_title!('contactos')
+      %h1.title= page_title!('mensajes')
 
-    .region
+    .region.wrapper
       - if current_admin
         .admin-control
           = link_to 'Crear Contacto', new_contacto_path, class: 'btn btn-primary'
-    - @contactos.each do |contacto|
-      = contacto.nombre
-      = contacto.email
-      = contacto.telefono
-      = contacto.mensaje
-      - if current_admin
-        = link_to 'Eliminar', contacto, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Email
+            %th Telefono
+            %th Mensaje
+            %th
+
+          - @contactos.each do |contacto|
+            %tr
+              %td= contacto.nombre
+              %td= contacto.email
+              %td= contacto.telefono
+              %td= contacto.mensaje
+              - if current_admin
+                %td= link_to 'Eliminar', contacto, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

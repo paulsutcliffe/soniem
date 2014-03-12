@@ -8,12 +8,16 @@
       - if current_admin
         .admin-control
           = link_to 'Crear Pregunta', new_pregunta_path, class: 'btn btn-primary'
-    .faqs  
+    #accordion.panel-group.faqs  
       - @preguntas.each_with_index do |pregunta, index|
-        %h4.question
-          = pregunta.pregunta
-        .answer  
-          = pregunta.respuesta
-        - if current_admin
-          = link_to 'Editar', edit_pregunta_path(pregunta), class: 'btn btn-success'
-          = link_to 'Eliminar', pregunta, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+        .panel.panel-default
+          .panel-heading
+            %h4{:class => 'panel-title questions'}
+              %a{:data => {'toggle' => 'collapse', 'parent' => '#accordion'  }, :href => "#collapse-#{index}" }
+                = pregunta.pregunta
+          %div{:id => "collapse-#{index}", :class => "panel-collapse collapsing"}
+            .panel-body.answer  
+              = pregunta.respuesta
+            - if current_admin
+              = link_to 'Editar', edit_pregunta_path(pregunta), class: 'btn btn-success'
+              = link_to 'Eliminar', pregunta, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

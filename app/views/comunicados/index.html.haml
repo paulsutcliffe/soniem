@@ -12,19 +12,20 @@
 
       - @comunicados.each do |comunicado|
         .region-comunicados
-          = link_to comunicado do
-            .white
-              = comunicado.titulo
-              = comunicado.contenido
-              -#%br  
-              -#= comunicado.fecha
-              %br
-              %br
-              .leer-mas
-                %span
-                  leer m&aacute;s
-                =image_tag image_path('circle-arrow.png') 
-              
-              - if current_admin
-                = link_to 'Editar', edit_comunicado_path(comunicado), class: 'btn btn-success'
-                =  link_to 'Eliminar', comunicado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+          - if comunicado.pdf.present?
+            = link_to comunicado.pdf_url, download: comunicado.pdf.filename do
+              .white
+                = comunicado.titulo
+                = comunicado.contenido
+                -#%br  
+                -#= comunicado.fecha
+                %br
+                %br
+                .leer-mas
+                  %span
+                    leer m&aacute;s
+                  =image_tag image_path('circle-arrow.png') 
+          - if current_admin
+            .buttons
+              =  link_to 'Editar', edit_comunicado_path(comunicado), class: 'btn btn-success'
+              =  link_to 'Eliminar', comunicado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
