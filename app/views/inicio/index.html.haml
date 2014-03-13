@@ -11,7 +11,7 @@
         ?
       .quienes-somos
         %p.arrow
-          =image_tag image_path('red-arrow.png'), class: 'img-responsive'
+          = image_tag image_path('red-arrow.png'), class: 'img-responsive'
         %p.info
           Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
 
@@ -26,10 +26,10 @@
       .noticias
         .info-noticias.noticias-left
           %h5
-            = @noticia.first.titulo
+            = @noticia.first.titulo if @noticia.first
           %p
-            = @noticia.first.contenido.truncate(150)
-          =link_to(@noticia.first) do
+            = @noticia.first.contenido.truncate(150) if @noticia.first
+          = link_to(@noticia.first) do
             .leer-mas
               %span
                 leer m&aacute;s

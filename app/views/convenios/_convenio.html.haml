@@ -10,3 +10,4 @@
     - if current_admin
       .admin-controls
         = link_to 'Editar', edit_convenio_path(convenio), class: 'btn btn-success'
+        = link_to 'Eliminar', convenio, :method => :delete, :data => { :confirm => '¿Estás Seguro?'}, class: 'btn btn-danger'

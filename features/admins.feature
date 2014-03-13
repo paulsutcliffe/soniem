@@ -1,6 +1,5 @@
 #language: es
 
-
 Característica: administración de los contenidos de las web
 
 Escenario: Ingresar como administrador

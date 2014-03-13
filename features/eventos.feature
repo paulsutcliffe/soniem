@@ -18,7 +18,6 @@ Escenario: Editar Evento
   Cuando hago click en "Eventos"
   Y hago click en "Editar"
   Y uso el titulo "Nuevo evento"
-  Y uso la fecha "29-01-2014"
   Cuando presiono "Guardar"
   Entonces debería ver "El evento se ha editado."
 

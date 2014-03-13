@@ -1,18 +1,13 @@
 #region-directivos
-
   .region
-    - if current_admin
-      .admin-control
-        = link_to 'Crear Directivo', new_directivo_path, class: 'btn btn-primary'
-    - @directivos.each do |directivo|
-      .director
-        .sub.white
-          = image_tag directivo.foto_url(:circle), class: 'img-circle'
-          .nombre= directivo.nombre
-          .cargo= directivo.cargo
-        - if current_admin
-          = link_to 'Editar', edit_directivo_path(directivo), class: 'btn btn-success'
-          = link_to 'Eliminar', directivo, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+    .director
+      .sub.white
+        = image_tag directivo.foto_url(:circle), class: 'img-circle'
+        .nombre= directivo.nombre
+        .cargo= directivo.cargo
+      - if current_admin
+        = link_to 'Editar', edit_directivo_path(directivo), class: 'btn btn-success'
+        = link_to 'Eliminar', directivo, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
   -#.region
     %p
       %b Nombre:

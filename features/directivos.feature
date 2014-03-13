@@ -5,7 +5,8 @@ Característica: Administracion de los directivos en la web
 Escenario: Crear directivo
   Dado que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Directivos"
+  Cuando hago click en "Quienes Somos"
+  Y hago click en "Directivos"
   Y hago click en "Crear Directivo"
   Y lleno el formulario con los datos del directivo
   Cuando presiono "Guardar"
@@ -15,7 +16,8 @@ Escenario: Editar directivo
   Dado que existe un directivo
   Y que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Directivo"
+  Cuando hago click en "Quienes Somos"
+  Y hago click en "Directivos"
   Y hago click en "Editar"
   Y uso el nombre "Nuevo directivo"
   Y uso el cargo "Cargo"
@@ -27,6 +29,7 @@ Escenario: Eliminar Directivo
   Dado que existe un directivo
   Y que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Directivo"
+  Cuando hago click en "Quienes Somos"
+  Y hago click en "Directivos"
   Y hago click en "Eliminar"
   Entonces debería ver "El directivo ha sido eliminado."
