@@ -1,10 +1,11 @@
 #language: es
+@javascript
 Característica: Administracion de los convenios en la web
 
 Escenario: Crear Convenio
   Dado que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Quienes Somos"
+  Cuando visito "Quienes Somos"
   Y hago click en "Convenios"
   Y hago click en "Crear convenio"
   Y lleno el formulario con los datos de convenio

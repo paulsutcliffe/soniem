@@ -9,6 +9,10 @@
       - if current_admin
         .admin-control
           = link_to 'Crear Informacion', new_informacion_path, class: 'btn btn-primary'
+          %br
+          = link_to 'Crear Convenio', new_convenio_path, class: 'btn btn-primary'
+          %br
+          = link_to 'Crear Directivo', new_directivo_path, class: 'btn btn-primary'
     
       - @informaciones.each do |informacion|
         = link_to informacion.titulo, informacion, remote: true, class: 'sidebar-links'

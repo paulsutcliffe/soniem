@@ -3,14 +3,14 @@ class ConveniosController < InheritedResources::Base
     params.permit(:convenio => [:nombre, :descripcion])
   end
   def create
-    create!( notice: "Convenio creado con éxito."){ convenios_path }
+    create!( notice: "Convenio creado con éxito."){ informaciones_path }
   end
 
   def update
-    update!( notice: "El convenio ha sido editado."){ convenios_path }
+    update!( notice: "El convenio ha sido editado."){ informaciones_path }
   end
 
   def destroy
-    destroy!( notice: "El convenio ha sido eliminado."){ convenios_path }
+    destroy!( notice: "El convenio ha sido eliminado."){ informaicones_path }
   end
 end

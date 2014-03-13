@@ -16,11 +16,10 @@
             = link_to comunicado.pdf_url, download: comunicado.pdf.filename do
               .white
                 = comunicado.titulo
+                %br
                 = comunicado.contenido
                 -#%br  
                 -#= comunicado.fecha
-                %br
-                %br
                 .leer-mas
                   %span
                     leer m&aacute;s

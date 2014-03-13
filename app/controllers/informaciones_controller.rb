@@ -34,7 +34,7 @@ class InformacionesController < InheritedResources::Base
       #format.html
       format.js {}
 
-      format.json { render json: @convenios}
+      format.json { render json: @convenios  }
     end
   end
 end
