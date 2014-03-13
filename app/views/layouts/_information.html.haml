@@ -1,3 +1,5 @@
+- content_for :javascript do
+  = javascript_include_tag 'socios.js'
 
 #region-header-information
   .container
@@ -13,7 +15,7 @@
       =link_to 'www.facebook.com' do
         =image_tag image_path('twitter.png')
     .socios
-      %button
+      %button.boton
         Socios
     .socios-login
       .form-group
@@ -23,15 +25,3 @@
           %input 
 
 
-:javascript
-  $(document).ready(function(){
-    //$( '.button' ).click(function() {
-    alert('hola');
-      /*$( '.socios-login' ).animate({
-        width: "toggle",
-        height: "toggle"
-        }, 1000, function() {
-      // Animation complete.
-        });*/
-    //});
-  });

@@ -3,7 +3,7 @@
     .region-title
       %h1= page_title!('directivo')
 
-  .region
+  -#.region
     %p
       %b Nombre:
       = @directivo.nombre
@@ -14,8 +14,11 @@
       %b Foto:
       = @directivo.foto
 
-  .region
+  -#.region
     - if current_admin
       .admin-controls
         = link_to 'Editar', edit_directivo_path(@directivo), class: 'btn btn-success'
     = link_to 'Regresar', directivos_path, class: 'btn btn-warning'
+
+
+  = render 'list'

@@ -11,6 +11,11 @@
   }
   .socios{text-transform: uppercase; background-color: $red; padding:6px 20px;}
 
+.boton {
+    background-color: #FF0000;
+    border: medium none;
+    color: #FFFFFF;
+}
 }
 
 #navigation{
@@ -298,7 +303,17 @@ h5{width:80%; display: inline-block;}
        position:absolute;
          right: 20px;
     top: 50px;
+    display:hidden;
         z-index: 500;
        }
 
+
+
+
+
+
+#region-convenios{
+  h3{margin-top: 0px;}
+  .white{padding: 10px; margin-bottom: 10px;}
+}
 

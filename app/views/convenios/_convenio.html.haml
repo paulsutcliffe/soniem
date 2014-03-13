@@ -1,11 +1,10 @@
-#region-convenios.container
+#region-convenios
   .region
-    %p
-      %b Nombre:
-      = convenio.nombre
-    %p
-      %b Descripcion:
-      = convenio.descripcion
+    .white
+      %h3
+        = convenio.nombre
+      %p
+        = convenio.descripcion
 
   .region
     - if current_admin
