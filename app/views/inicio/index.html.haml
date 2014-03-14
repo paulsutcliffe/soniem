@@ -36,7 +36,7 @@
               = image_tag image_path('circle-arrow.png') 
         .info-noticias.noticias-right
           = image_tag image_path('white-triangle.png'), class: 'triangulo'
-          = image_tag image_path('noticias-img.png'), class: 'img-responsive'
+          = image_tag @noticia.first.imagenes.first.imagen_url(:thumb) if @noticia.first.imagenes.any?
       
   .container-banner
     .container

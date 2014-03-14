@@ -17,7 +17,7 @@
               .white
                 = comunicado.titulo
                 %br
-                = comunicado.contenido
+                = comunicado.contenido.truncate(120)
                 -#%br  
                 -#= comunicado.fecha
                 .leer-mas

@@ -22,6 +22,16 @@
         %form
           %label
             search
-          %input 
+          %input
+          - if current_socio
+            = link_to 'Cerrar Sesión', destroy_socio_session_path, method: :delete
+          - else
+            %br
+              = link_to 'Lista de socios', socios_path
+            %br
+              = link_to 'Ingresar', new_socio_session_path
+            %br
+              = link_to 'Registrarse', new_socio_registration_path
+
 
 

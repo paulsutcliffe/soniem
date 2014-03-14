@@ -3,5 +3,5 @@ class Noticia < ActiveRecord::Base
 
   accepts_nested_attributes_for :imagenes
 
-    paginates_per 9
+  paginates_per 9
 end
