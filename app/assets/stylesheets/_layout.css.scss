@@ -12,13 +12,13 @@
 @extend .col-sm-8;
 @extend .col-xs-12;
 }
-.region-inicio-eventos, .region-comunicados, .region-noticias{
+.evento-lista,.region-inicio-eventos, .region-comunicados, .region-noticias{
 @extend .col-md-4;
 @extend .col-lg-4;
 @extend .col-sm-4;
 @extend .col-xs-12;
 }
-.region-inicio-eventos .evento .fecha{
+.evento .fecha{
 @extend .col-md-3;
 @extend .col-lg-3;
 @extend .col-sm-3;

@@ -10,7 +10,12 @@
     margin-right: 10px;
   }
   .socios{text-transform: uppercase; background-color: $red; padding:6px 20px;}
-
+  .socios-login .form-group .col-sm-8 {
+    margin-right: -20px !important;
+  }
+  .socios-login .form-group {
+      margin-right: -5px !important;
+    }
 .boton {
     background-color: #FF0000;
     border: medium none;
@@ -89,17 +94,6 @@ width:100%;
       }
     }
   }
-  .region-inicio-eventos{
-    margin-bottom: 20px;
-    .evento{background-color: white;height: 9em;padding-top: 10px;
-      .fecha span{
-        font-size: 4em;
-      }
-      .descripcion{
-        margin-top: 30px;
-      }
-    }
-  }
 
   .container-banner {
     margin-top: 30px;
@@ -127,11 +121,23 @@ background-color: white;
 color: $gray;
 padding: 30px 20px;
 }
+
 .leer-mas{span{color:$red;}}
 .region-title{padding-left: 15px; padding-right: 15px;}
 .white{background-color: white;}
 .admin-control{margin-bottom: 10px;}
 .compartir{ font-family: 'Oswald'; margin-top: 20px;span{color: $red;}}
+  .region-inicio-eventos{
+    margin-bottom: 20px;
+    .evento{background-color: white;height: 9em;padding-top: 10px;
+      .fecha span{
+        font-size: 4em;
+      }
+      .descripcion{
+        margin-top: 15px;
+      }
+    }
+  }
 /*Socios*/
 #region-socios{
   .region-socios{
@@ -299,18 +305,34 @@ h5{width:80%; display: inline-block;}
 .socios-login{
  background-color: red;
    padding-top: 20px;
-     padding-left: 30px;
        position:absolute;
          right: 20px;
     top: 50px;
     display:hidden;
         z-index: 500;
-       }
+a{
+display:block;
+     padding-bottom: 10px;
+         padding-right: 20px;
+                 text-decoration: underline;
+                     text-transform: uppercase;adding-left: 30px;
+color:white;
+                   }
+      }
+
+.evento-lista{
+  .white{
+  height: 7em;
+  margin-top: 20px;
+  padding: 10px;  
+}
+}
 
 
-
-
-
+#region-eventos{
+.evento{height: 12em;}
+.links{bottom: 15px; position: absolute; left: 30px;}
+}
 
 #region-convenios{
   h3{margin-top: 0px;}

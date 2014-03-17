@@ -2,29 +2,30 @@
 
   .region
     .region-title
-      %h1= page_title!('eventos')
+      %h1.title= page_title!('eventos')
 
     .region
       - if current_admin
         .admin-control
           = link_to 'Crear Evento', new_evento_path, class: 'btn btn-primary'
 
-      .table-responsive
-        %table.table
-          %tr
-            %th Titulo
-            %th Lugar
-            %th Fecha
-            %th Link
-            %th
-            %th
-
-          - @eventos.each do |evento|
-            %tr
-              %td= evento.titulo
-              %td= evento.lugar
-              %td= evento.fecha
-              %td= evento.link
-              - if current_admin
-                %td= link_to 'Editar', edit_evento_path(evento), class: 'btn btn-success'
-                %td= link_to 'Eliminar', evento, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+      - @eventos.each do |evento|
+        .evento-lista.region-inicio-eventos
+          .white.evento
+            .fecha
+              %span 
+                = evento.fecha.day
+              %br
+              = evento.fecha.strftime("%B")
+            .descripcion
+              .titulo
+                %p= evento.titulo
+              .lugar  
+                %p= evento.lugar
+            %br
+            .clear
+            .links
+              = link_to evento.link
+          - if current_admin
+            = link_to 'Editar', edit_evento_path(evento), class: 'btn btn-success'
+            = link_to 'Eliminar', evento, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
