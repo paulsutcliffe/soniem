@@ -22,13 +22,14 @@
     color: #FFFFFF;
 }
 }
-
+.navbar-nav{float:none;}
 #navigation{
   background-color: white;
   .navbar-nav{
     margin: 3em 0 1em 0;
     min-height: 50px;
     text-align: center;
+    float:  none !important;
   }
   ul li a{
   text-transform: uppercase;
@@ -43,7 +44,10 @@
   background-color: white;
   color: $red;
   }
-
+  .nav.navbar-nav{
+    margin-left: auto !important;
+                width: 70%;
+  }
 }
 
 #carousel-generic-2 {

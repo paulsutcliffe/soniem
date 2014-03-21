@@ -8,3 +8,18 @@ $(document).ready(function(){
         });
   });
 });
+
+
+(function($) {
+  $(function() { //on DOM ready 
+          $("#scroller").simplyScroll({
+            pauseOnHover: false
+          
+          });
+          $("#scroller2").simplyScroll({
+            direction: 'forward',
+            pauseOnHover: false
+          });
+            
+  });
+ })(jQuery);

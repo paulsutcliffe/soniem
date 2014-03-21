@@ -1,0 +1,12 @@
+@media (max-width: 767px){
+.nav.navbar-nav{width: 100% !important;}
+
+}
+@media (min-width: 768px) and (max-width: 1052px){
+.nav.navbar-nav{width: 100% !important;}
+  .navbar-header{
+  float:none;
+  margin: 0 auto;
+  width: 39%;
+  }
+}
