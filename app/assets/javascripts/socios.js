@@ -1,4 +1,7 @@
-$(document).ready(function(){
+
+var ready;
+ready = function() {
+
   $('.socios-login').hide();
   $('.boton').click(function() {
     $( '.socios-login' ).animate({
@@ -7,19 +10,7 @@ $(document).ready(function(){
         }, 1000, function() {
         });
   });
-});
+}
 
-
-(function($) {
-  $(function() { //on DOM ready 
-          $("#scroller").simplyScroll({
-            pauseOnHover: false
-          
-          });
-          $("#scroller2").simplyScroll({
-            direction: 'forward',
-            pauseOnHover: false
-          });
-            
-  });
- })(jQuery);
+$(document).ready(ready);
+$(document).on('page:load', ready);

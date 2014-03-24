@@ -21,4 +21,3 @@
 //= require noticias.js.coffee
 //= require jquery.simplyscroll.js
 //= require jquery.simplyscroll.min.js
-//= require socios.js

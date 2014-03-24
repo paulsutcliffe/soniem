@@ -44,6 +44,9 @@
   background-color: white;
   color: $red;
   }
+  .navbar-nav > li{
+      border-bottom: 2px solid #FFFFFF;
+  }
   .nav.navbar-nav{
     margin-left: auto !important;
                 width: 70%;
@@ -347,9 +350,6 @@ color:white;
   .white{padding: 10px; margin-bottom: 10px;}
 }
 
+.asociado-slide{img{width: 95px; height:95px;}}
 
-
-.navbar-toggle{
-border: 1px solid red;
-
-}
+.navbar-toggle{border: 1px solid red;}
