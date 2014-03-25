@@ -1,0 +1,18 @@
+#region-temas_no_registrados.container
+  .region
+    .region-title
+      %h1= page_title!('tema_no_registrado')
+
+  .region
+    %p
+      %b Titulo:
+      = @tema_no_registrado.titulo
+    %p
+      %b Autor:
+      = @tema_no_registrado.autor
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_tema_no_registrado_path(@tema_no_registrado), class: 'btn btn-success'
+    = link_to 'Regresar', temas_no_registrados_path, class: 'btn btn-warning'
