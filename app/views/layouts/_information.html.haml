@@ -25,12 +25,18 @@
               = text_field_tag :busqueda, params[:busqueda], :id => 'nombre_de_producto', class: 'form-control'
             .col-sm-2
               = submit_tag 'buscar', :name => nil, class: 'btn btn-default'
-      - if current_socio
-        = link_to 'Cerrar Sesión', destroy_socio_session_path, method: :delete
+      - if current_admin
+        = link_to 'Registrar Socio', new_socio_registration_path, class: 'link'
+        = link_to 'Lista de Socios', socios_path, class: 'link'
       - else
-        = link_to 'Lista de socios', socios_path, class: 'link'
-        = link_to 'Ingresar', new_socio_session_path, class: 'link'
-        = link_to 'Registrarse', new_socio_registration_path, class: 'link'
+        - if current_socio
+          = link_to 'Cerrar Sesión', destroy_socio_session_path, method: :delete
+          = link_to 'Lista de Socios', socios_path, class: 'link'
+        - else
+          = link_to 'Lista de Socios', socios_path, class: 'link'
+          = link_to 'Ingresar', new_socio_session_path, class: 'link'
+
+
 
 
 
