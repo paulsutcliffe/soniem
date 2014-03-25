@@ -58,6 +58,10 @@ end
   FactoryGirl.create :audio
 end
 
+10.times do
+  FactoryGirl.create :tema_no_registrado
+end
+
 Ubicacion.create(direccion: 'AV. ANDRÉS RAZURI  206
                  URB. MARANGA, SAN MIGUEL
                  LIMA - PERÚ', lat: 123 , lng: 123)

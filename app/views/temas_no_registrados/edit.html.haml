@@ -1,0 +1,18 @@
+- page_title!('Editando tema_no_registrado')
+
+#region-temas_no_registrados.container
+
+  .region
+    .region-title
+      %h1
+        Editando
+        %b
+          tema_no_registrado
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Ver', @tema_no_registrado, class: 'btn btn-info'
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'
