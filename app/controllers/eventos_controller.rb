@@ -1,7 +1,8 @@
 class EventosController < InheritedResources::Base
   def permitted_params
-    params.permit(:evento => [:titulo, :lugar, :fecha, :link])
+    params.permit(:evento => [:titulo, :lugar, :fecha, :link, :socio_id])
   end
+
   def create
     create!( notice: "Evento creado con éxito."){ eventos_path }
   end

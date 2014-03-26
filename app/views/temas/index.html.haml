@@ -13,18 +13,14 @@
         %table.table
           %tr
             %th Titulo
-            %th Ano
-            %th Duracion
-            %th Formato
+            %th Autor
             %th
             %th
 
           - @temas.each do |tema|
             %tr
               %td= tema.titulo
-              %td= tema.ano
-              %td= tema.duracion
-              %td= tema.formato
+              %td= tema.autor
               - if current_admin
                 %td= link_to 'Editar', edit_tema_path(tema), class: 'btn btn-success'
                 %td= link_to 'Eliminar', tema, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

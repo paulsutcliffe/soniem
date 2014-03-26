@@ -5,6 +5,10 @@ class Socio < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :fotografias
+  has_many :eventos
+  has_many :temas
+  has_many :audios
 
   accepts_nested_attributes_for :fotografias
+  accepts_nested_attributes_for :eventos
 end

@@ -1,6 +1,6 @@
 class TemasController < InheritedResources::Base
   def permitted_params
-    params.permit(:tema => [:titulo, :ano, :formato, :duracion])
+    params.permit(:tema => [:titulo, :autor])
   end
   def create
     create!( notice: "Tema creado con éxito."){ temas_path }
