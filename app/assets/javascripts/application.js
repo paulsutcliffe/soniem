@@ -19,5 +19,5 @@
 //= require jquery_nested_form
 //= require jquery.infinitescroll
 //= require noticias.js.coffee
-//= require jquery.simplyscroll.js
-//= require jquery.simplyscroll.min.js
+//= require endless_scroll.js
+//= require endless_scroll_min.js
