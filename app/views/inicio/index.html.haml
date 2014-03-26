@@ -35,17 +35,27 @@
             .leer-mas
               %span
                 leer m&aacute;s
-              = image_tag image_path('circle-arrow.png') 
+              = image_tag image_path('circle-arrow.png')
         .info-noticias.noticias-right
           = image_tag image_path('white-triangle.png'), class: 'triangulo'
           = image_tag @noticia.first.imagenes.first.imagen_url(:thumb), class:'img-responsive' if @noticia.first.imagenes.any?
-      
+
   .container-banner
     .container
       %h1
         Nuestros
         %span
           asociados
+<<<<<<< HEAD
+    %ul#scroller
+      - @socios1.each do |socio|
+        %li.asociado-slide
+          = image_tag socio.fotografias.first.fotografia_url(:thumb), class: 'img-responsive'
+    %ul#scroller2
+      - @socios2.each do |socio|
+        %li.asociado-slide
+          = image_tag socio.fotografias.first.fotografia_url(:thumb), class: 'img-responsive'
+=======
     #scroller
       .asociado-slide= image_tag(image_path('facebook.png'), class: 'img-responsive')
       .asociado-slide= image_tag(image_path('twitter.png'), class: 'img-responsive')
@@ -65,11 +75,24 @@
       .asociado-slide= image_tag(image_path('soniem-logo.png'), class: 'img-responsive')
       .asociado-slide= image_tag(image_path('pointer.png'), class: 'img-responsive')
       .asociado-slide= image_tag(image_path('circle-arrow.png'), class: 'img-responsive')
+<<<<<<< HEAD
       .asociado-slide= image_tag(image_path('clip.png'), class: 'img-responsive')
       .asociado-slide= image_tag(image_path('red-arrow.png'), class: 'img-responsive')
       .asociado-slide= image_tag(image_path('red-mail.png'), class: 'img-responsive')
       .asociado-slide= image_tag(image_path('noticias-img.png'), class: 'img-responsive')
       .asociado-slide= image_tag(image_path('flecha-arriba.jpg'), class: 'img-responsive')
+=======
+    -#%ul#scroller2
+      %li.asociado-slide
+        = image_tag image_path('soniem-logo.png'), class: 'img-responsive'
+      %li.asociado-slide
+        = image_tag image_path('soniem-logo.png'), class: 'img-responsive'
+      %li.asociado-slide
+        = image_tag image_path('soniem-logo.png'), class: 'img-responsive'
+      %li.asociado-slide
+        = image_tag image_path('soniem-logo.png'), class: 'img-responsive'
+>>>>>>> 7b4e99ccb26dac89e2c981386dd90eaa84f02913
+>>>>>>> 226ba80ccd7de086625a7de14f9b4aab8fa0614d
   .container
     .region-inicio-social
       %h1
