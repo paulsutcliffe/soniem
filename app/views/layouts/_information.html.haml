@@ -29,6 +29,7 @@
         = link_to 'Cerrar Sesión', destroy_socio_session_path, method: :delete
       - else
         = link_to 'Lista de socios', socios_path, class: 'link'
+        = link_to 'Temas NO registrados', temas_no_registrados_path, class: 'link'
         = link_to 'Ingresar', new_socio_session_path, class: 'link'
         = link_to 'Registrarse', new_socio_registration_path, class: 'link'
 

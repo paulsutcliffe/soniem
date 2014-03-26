@@ -9,8 +9,15 @@
 
   .region
     .region-socios-img
-      - @socio.fotografias.each do |fotografia|
-        = image_tag fotografia.fotografia_url(:medium), class: 'img-responsive'
+      #carousel-asociado.carousel.slide
+        .carousel-inner
+          - @socio.fotografias.each_with_index do |fotografia, index|
+            - if index == 0
+              .item.active
+                = image_tag fotografia.fotografia_url(:medium), class: 'img-responsive'
+            - else
+              .item
+                = image_tag fotografia.fotografia_url(:medium), class:'img-responsive'
       .contacto
         %span
           CONTACTO 
@@ -20,7 +27,7 @@
             =image_tag (image_path('facebook-share.png'))
     .region-socios-info
       .arrow
-        = image_tag image_path ('red-arrow.png')
+        = image_tag(image_path('red-arrow.png'), class: 'img-responsive')
       %p.info
         = @socio.contenido
       -#= @socio.web

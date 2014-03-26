@@ -49,12 +49,18 @@
   }
   .nav.navbar-nav{
     margin-left: auto !important;
-                width: 70%;
+    width: 70%;
   }
+  .dropdown-list li {padding:10px;}
+   .nav .open > a:focus {background-color: #FFFFFF;}
+  .dropdown-list {padding-left: 0;}
+  .dropdown-list li:hover{border:none;}
 }
 
+
+
 #carousel-generic-2 {
-    background-image: image-url("background-image.png");
+    background-image: url(image-path('background-image.png'));
       background-position: center center;
         background-repeat: no-repeat;
           background-size: cover;
@@ -161,7 +167,7 @@ padding: 30px 20px;
   .region-socios > a{
   text-transform: capitalize;
   }
-  .contacto{span{color: $red;}}
+  .contacto{margin-top:15px; span{color: $red;}}
 
   .region-inicio-eventos{
     margin-bottom: 20px;
@@ -202,11 +208,9 @@ margin-bottom: 20px;
 
 /*Ubicacion*/
 .region-ubicacion-info{
-  width: 50%;
-  margin: 20px auto 30px;
   background-color: white;
   text-align: center;
-
+  margin-bottom: 20px;
   img{diplay: inline-block; vertical-align: baseline; margin-right: 10px;}
   h3{width: 276px; display: inline-block; text-align: left;}
 }
@@ -240,6 +244,7 @@ label{margin-bottom: 5px;}
 .noticias-list{padding-left:0px;}
 .region-noticias{
 margin-bottom: 30px;
+.img-responsive{width: 100%;}
 .triangulo{position:absolute; margin-left: 25px;margin-top: -19px;}
 .region-noticias-info{
 background-color: white;
@@ -270,6 +275,7 @@ h5{width:80%; display: inline-block;}
  }
  .sub{
   padding-bottom: 30px;
+      height: 15em;
  }
 }
 }
@@ -311,6 +317,8 @@ h5{width:80%; display: inline-block;}
     }
   
   }
+  .panel{a:focus, a:hover{color: $gray; text-decoration: none; outline: none;}}
+  .panel-title:hover{color: $gray;}
 }
 
 .socios-login{
@@ -353,3 +361,21 @@ color:white;
 .asociado-slide{img{width: 95px; height:95px;}}
 
 .navbar-toggle{border: 1px solid red;}
+
+#region-temas_no_registrados{
+.tema {
+  background-color: white;
+  transition: all 0.6s ease;
+  padding: 8px 20px;
+  margin-top: 10px;
+  min-height: 10px;
+}
+
+.tema:hover {
+  background-color: $gray;
+  h3,h4{color: white;}
+}
+}
+
+
+.audiojs{width: 100% !important;}

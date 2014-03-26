@@ -11,9 +11,9 @@
     #accordion.panel-group.faqs  
       - @preguntas.each_with_index do |pregunta, index|
         .panel.panel-default
-          .panel-heading
-            %h4{:class => 'panel-title questions'}
-              %a{:data => {'toggle' => 'collapse', 'parent' => '#accordion'  }, :href => "#collapse-#{index}" }
+          %a{:data => {'toggle' => 'collapse', 'parent' => '#accordion'  }, :href => "#collapse-#{index}" }
+            .panel-heading
+              %h4{:class => 'panel-title questions'}
                 = pregunta.pregunta
           %div{:id => "collapse-#{index}", :class => "panel-collapse collapsing"}
             .panel-body.answer  

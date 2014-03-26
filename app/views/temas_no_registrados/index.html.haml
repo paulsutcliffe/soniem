@@ -2,27 +2,25 @@
 
   .region
     .region-title
-      %h1= page_title!('temas_no_registrados')
-
+      %h1.title= page_title!('temas no registrados')
     .region
       - if current_admin
         .admin-control
           = link_to 'Crear Tema no registrado', new_tema_no_registrado_path, class: 'btn btn-primary'
-
-      .table-responsive
-        %table.table
-          %tr
-            %th Titulo
-            %th Autor
-            %th
-            %th
-            %th
-
-          - @temas_no_registrados.each do |tema_no_registrado|
-            %tr
-              %td= tema_no_registrado.titulo
-              %td= tema_no_registrado.autor
-              %td= link_to 'Ver', tema_no_registrado, class: 'btn btn-info'
-              - if current_admin
-                %td= link_to 'Editar', edit_tema_no_registrado_path(tema_no_registrado), class: 'btn btn-success'
-                %td= link_to 'Eliminar', tema_no_registrado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+    
+      .form-group
+        = form_tag resultado_de_busqueda_path, :method => 'get', html: { class: 'form-horizontal'} do
+          .form-group
+            .col-sm-8
+              = text_field_tag :busqueda, params[:busqueda], :id => 'nombre_de_producto', class: 'form-control'
+            .col-sm-2
+              = submit_tag 'buscar', :name => nil, class: 'btn btn-default'
+      .clear
+      .wrapper
+        - @temas_no_registrados.each do |tema_no_registrado|
+          .tema
+            %h3= tema_no_registrado.titulo
+            %h4= tema_no_registrado.autor
+            - if current_admin
+              =link_to 'Editar', edit_tema_no_registrado_path(tema_no_registrado), class: 'btn btn-success'
+              =link_to 'Eliminar', tema_no_registrado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

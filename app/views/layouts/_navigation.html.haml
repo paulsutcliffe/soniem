@@ -13,7 +13,7 @@
           %li= link_to 'Inicio', root_path, class: 'active'
           %li= link_to 'Slides', slides_path
           %li= link_to 'Quienes Somos', informaciones_path
-          %li= link_to 'Afiliacion', afiliacion_index_path
+          %li= link_to 'Afiliación', afiliacion_index_path
           %li= link_to 'Noticias', noticias_path
           %li= link_to 'Comunicados', comunicados_path
           %li= link_to 'Mensajes', contactos_path
@@ -22,7 +22,17 @@
         - else
           %li= link_to 'Inicio', root_path, class: 'active'
           %li= link_to 'Quiénes Somos', informaciones_path
-          %li= link_to 'Afiliación', afiliacion_index_path
+          %li.dropdown
+            %a{:href => "#", :class=> "dropdown-toggle", :data => {:toggle => "dropdown"}} Afiliacion
+            .dropdown-menu
+              %ul.dropdown-list
+                %li
+                  = link_to 'Requisitos', afiliacion_index_path
+                %li
+                  = link_to 'Formatos', formatos_path
+                %li
+                  = link_to 'Preguntas', preguntas_path
+
           %li= link_to 'Noticias', noticias_path
           %li= link_to 'Comunicados', comunicados_path
           %li= link_to 'Contacto', new_contacto_path
