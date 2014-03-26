@@ -11,16 +11,8 @@
     .col-sm-10
       = f.text_field :titulo, class: 'form-control'
   .form-group
-    = f.label :ano, class: 'col-sm-2 control-label'
+    = f.label :autor, class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.date_select :ano, class: 'form-control'
-  .form-group
-    = f.label :duracion, class: 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_field :duracion, class: 'form-control'
-  .form-group
-    = f.label :formato, class: 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_field :formato, class: 'form-control'
+      = f.text_field :autor, class: 'form-control'
   .actions
     = f.submit 'Guardar', class: 'btn btn-default'

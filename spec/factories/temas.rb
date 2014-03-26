@@ -3,8 +3,6 @@ require 'faker'
 FactoryGirl.define do
   factory :tema do
     titulo { Faker::Lorem.sentence }
-    ano "2014-02-20"
-    duracion { Faker::Number.digit }
-    formato { Faker::Lorem.word }
+    autor { Faker::Name.name }
   end
 end

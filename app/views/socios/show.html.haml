@@ -39,23 +39,38 @@
         %audio{:src => "mp3/audio", :preload => "auto"}
         %audio{:src => "mp3/audio", :preload => "auto"}
     .region-evento.region-inicio-eventos
-      %h2.titulo
-        PR&Oacute;XIMOS
-        %span
-          EVENTOS
-      .evento
-        .fecha
+      - if current_socio
+        = nested_form_for @socio do |f|
+          = f.fields_for :eventos do |evento_form|
+            .form-group
+              .col-sm-8
+                = evento_form.text_field :titulo, placeholder: "Titulo", class: 'form-control'
+                = evento_form.text_field :lugar, placeholder: "Lugar", class: 'form-control'
+                = evento_form.text_field :link, placeholder: "Link", class: 'form-control'
+                = evento_form.date_select :fecha, class: 'form-control'
+              .col-sm-2
+                = evento_form.link_to_remove "Eliminar evento", class: 'btn btn-danger'
+          .form-group
+            = f.link_to_add "Agregar Evento", :eventos, class: 'btn btn-primary'
+          = f.submit "Guardar", class: 'btn btn-default'
+      - @socio.eventos.each do |evento|
+        %h2.titulo
+          PR&Oacute;XIMOS
           %span
-            20
-          %br
-            Diciembre
-        .descripcion
-          .titulo
-            %p
-              Titulo del evento
-          .lugar
-            %p
-              Lugar del evento
+            EVENTOS
+        .evento
+          .fecha
+            %span
+              = evento.fecha.day
+            %br
+              = evento.fecha.strftime("%B")
+          .descripcion
+            .titulo
+              %p
+                = evento.titulo.truncate(50)
+            .lugar
+              %p
+                = evento.lugar
     .clear
       
     .region-list
