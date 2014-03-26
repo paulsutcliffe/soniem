@@ -43,7 +43,7 @@
         DEL INTERPRETE
       - @socio.audios.each do |audio|
         .socios-canciones
-          %audio{:src => audio.audios, :preload => "auto"}
+          %audio{:src => audio.audio_url, :preload => "auto"}
       .region
         - if current_socio
           = nested_form_for @socio do |f|
