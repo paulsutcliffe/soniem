@@ -8,7 +8,9 @@ DatabaseCleaner.clean
 
 FactoryGirl.create :admin
 
-FactoryGirl.create :fotografia
+24.times do
+  FactoryGirl.create :fotografia
+end
 
 10.times do
   FactoryGirl.create :convenio

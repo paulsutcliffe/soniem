@@ -8,7 +8,7 @@ FactoryGirl.define do
     twitter { Faker::Internet.url }
     facebook { Faker::Internet.url }
     soundcloud { Faker::Internet.url }
-    email "email@domain.com"
+    email { Faker::Internet.email }
     password "12345678"
     password_confirmation "12345678"
   end

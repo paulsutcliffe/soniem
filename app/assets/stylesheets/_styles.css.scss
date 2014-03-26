@@ -60,11 +60,7 @@
 
 
 #carousel-generic-2 {
-<<<<<<< HEAD
-    background-image: url(image-path('background-image.png'));
-=======
     background-image: url(image_path('background-image.png'));
->>>>>>> dfb0a1a461511886c51f0d1b275b47e35e2cec03
       background-position: center center;
         background-repeat: no-repeat;
           background-size: cover;
@@ -319,7 +315,7 @@ h5{width:80%; display: inline-block;}
     }
     .question{
     }
-  
+
   }
   .panel{a:focus, a:hover{color: $gray; text-decoration: none; outline: none;}}
   .panel-title:hover{color: $gray;}
@@ -347,7 +343,7 @@ color:white;
   .white{
   height: 7em;
   margin-top: 20px;
-  padding: 10px;  
+  padding: 10px;
 }
 }
 
