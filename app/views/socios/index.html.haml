@@ -15,6 +15,6 @@
             .region-socios
               = image_tag socio.fotografias.first.fotografia_url(:thumb) if socio.fotografias.first
               = socio.nombre
-              - if current_admin
-                = link_to 'Editar', edit_socio_path(socio), class: 'btn btn-success'
-                = link_to 'Eliminar', socio, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+          - if current_admin
+            = link_to 'Editar', edit_socio_path(socio), class: 'btn btn-success'
+            = link_to 'Eliminar', socio, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
