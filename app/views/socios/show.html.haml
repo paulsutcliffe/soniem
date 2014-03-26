@@ -41,10 +41,22 @@
         %span
           TEMAS REPRESENTATIVOS
         DEL INTERPRETE
-      .socios-canciones
-        %audio{:src => "mp3/audio", :preload => "auto"}
-        %audio{:src => "mp3/audio", :preload => "auto"}
-        %audio{:src => "mp3/audio", :preload => "auto"}
+      - @socio.audios.each do |audio|
+        .socios-canciones
+          %audio{:src => audio.audios, :preload => "auto"}
+      .region
+        - if current_socio
+          = nested_form_for @socio do |f|
+            = f.fields_for :audios do |audio_form|
+              .form-group
+                .col-sm-8
+                  = audio_form.text_field :titulo, placeholder: "Titulo", class: 'form-control'
+                  = audio_form.file_field :audio, placeholder: "Audio", class: 'form-control'
+                .col-sm-2
+                  = audio_form.link_to_remove "Eliminar Audios", class: 'btn btn-danger'
+            .form-group
+              = f.link_to_add "Agregar Audios", :audios, class: 'btn btn-primary'
+            = f.submit "Guardar", class: 'btn btn-default'
     .region-evento.region-inicio-eventos
       - if current_socio
         = nested_form_for @socio do |f|
@@ -60,11 +72,11 @@
           .form-group
             = f.link_to_add "Agregar Evento", :eventos, class: 'btn btn-primary'
           = f.submit "Guardar", class: 'btn btn-default'
+      %h2.titulo
+        PR&Oacute;XIMOS
+        %span
+          EVENTOS
       - @socio.eventos.each do |evento|
-        %h2.titulo
-          PR&Oacute;XIMOS
-          %span
-            EVENTOS
         .evento
           .fecha
             %span
@@ -84,37 +96,29 @@
       %h2.titulo
         LISTA DE OBRAS
       .table-responsive
+        - if current_socio
+          = nested_form_for @socio do |f|
+            = f.fields_for :temas do |tema_form|
+              .form-group
+                .col-sm-8
+                  = tema_form.text_field :titulo, placeholder: "Titulo", class: 'form-control'
+                  = tema_form.text_field :autor, placeholder: "Autor", class: 'form-control'
+                .col-sm-2
+                  = tema_form.link_to_remove "Eliminar Tema", class: 'btn btn-danger'
+            .form-group
+              = f.link_to_add "Agregar Tema", :temas, class: 'btn btn-primary'
+            = f.submit "Guardar", class: 'btn btn-default'
         %table.table.table-striped
           %tr
             %td.title.name
               Tìtulo
             %td.title
-              A&ntilde;o
-            %td.title
-              Duraci&oacute;n
-            %td.title
-              Formato
-          %tr
-            %td.name
-              Mi marimba
-            %td
-              1997
-            %td
-              3:20
-            %td
-              Quinteto
-
-          %tr
-            %td.name
-              Mi marimba
-            %td
-              1997
-            %td
-              3:20
-            %td
-              Quinteto
+              Autor
+          - @socio.temas.each do |tema|
+            %tr
+              %td.name
+                = tema.titulo
+              %td
+                = tema.autor
   .region
-    - if current_admin
-      .admin-controls
-        = link_to 'Editar', edit_socio_path(@socio), class: 'btn btn-success'
     = link_to 'Regresar', socios_path, class: 'btn btn-warning'

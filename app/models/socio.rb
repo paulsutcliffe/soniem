@@ -9,6 +9,8 @@ class Socio < ActiveRecord::Base
   has_many :temas
   has_many :audios
 
-  accepts_nested_attributes_for :fotografias
-  accepts_nested_attributes_for :eventos
+  accepts_nested_attributes_for :fotografias, :allow_destroy => true
+  accepts_nested_attributes_for :eventos, :allow_destroy => true
+  accepts_nested_attributes_for :temas, :allow_destroy => true
+  accepts_nested_attributes_for :audios, :allow_destroy => true
 end

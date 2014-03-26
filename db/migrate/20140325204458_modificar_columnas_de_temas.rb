@@ -1,9 +1,6 @@
 class ModificarColumnasDeTemas < ActiveRecord::Migration
-  def up
+  def change
     add_column :temas, :autor, :string
-  end
-
-  def down
     remove_column :temas, :ano
     remove_column :temas, :duracion
     remove_column :temas, :formato

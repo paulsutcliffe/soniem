@@ -28,20 +28,13 @@
       - if current_admin
         = link_to 'Registrar Socio', new_socio_registration_path, class: 'link'
         = link_to 'Lista de Socios', socios_path, class: 'link'
+        = link_to 'Temas No Registrados', temas_no_registrados_path, class: 'link'
       - else
-        = link_to 'Lista de socios', socios_path, class: 'link'
-        = link_to 'Temas NO registrados', temas_no_registrados_path, class: 'link'
-        = link_to 'Ingresar', new_socio_session_path, class: 'link'
-        = link_to 'Registrarse', new_socio_registration_path, class: 'link'
-<<<<<<< HEAD
-=======
         - if current_socio
-          = link_to 'Cerrar Sesión', destroy_socio_session_path, method: :delete
           = link_to 'Lista de Socios', socios_path, class: 'link'
+          = link_to 'Temas No Registrados', temas_no_registrados_path, class: 'link'
+          = link_to 'Cerrar Sesion', destroy_socio_session_path, method: :delete
         - else
-
-
->>>>>>> 7b4e99ccb26dac89e2c981386dd90eaa84f02913
-
-
-
+          = link_to 'Lista de Socios', socios_path, class: 'link'
+          = link_to 'Temas NO registrados', temas_no_registrados_path, class: 'link'
+          = link_to 'Ingresar', new_socio_session_path, class: 'link'

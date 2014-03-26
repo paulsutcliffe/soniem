@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140325215437) do
+ActiveRecord::Schema.define(version: 20140326211638) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20140325215437) do
     t.string   "audio"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "socio_id"
   end
 
   create_table "comunicados", force: true do |t|
@@ -160,12 +161,10 @@ ActiveRecord::Schema.define(version: 20140325215437) do
 
   create_table "temas", force: true do |t|
     t.string   "titulo"
-    t.date     "ano"
-    t.string   "duracion"
-    t.string   "formato"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "autor"
+    t.integer  "socio_id"
   end
 
   create_table "temas_no_registrados", force: true do |t|
