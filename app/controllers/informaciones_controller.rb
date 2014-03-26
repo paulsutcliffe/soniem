@@ -37,4 +37,15 @@ class InformacionesController < InheritedResources::Base
       format.json { render json: @convenios  }
     end
   end
+  def create
+    create!( notice: "Información creada con éxito."){ informaciones_path }
+  end
+
+  def update
+    update!( notice: "La información ha sido editado."){ informaciones_path }
+  end
+
+  def destroy
+    destroy!( notice: "La información ha sido eliminada."){ informaicones_path }
+  end
 end
