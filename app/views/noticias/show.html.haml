@@ -21,11 +21,12 @@
         = image_tag imagen.imagen_url(:full), class: 'img-responsive'
 
   .clear
-  .region-comentarios
-    %h2.titulo
-      COMENTARIOS
-    =render 'fb_plugin'
-  .region
-    - if current_admin
-      .admin-controls
-        = link_to 'Editar', edit_noticia_path(@noticia), class: 'btn btn-success'
+  .wrapper  
+    .region-comentarios
+      %h2.titulo
+        COMENTARIOS
+      =render 'fb_plugin'
+    .region
+      - if current_admin
+        .admin-controls
+          = link_to 'Editar', edit_noticia_path(@noticia), class: 'btn btn-success'

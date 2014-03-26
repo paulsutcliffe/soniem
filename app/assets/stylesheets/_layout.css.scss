@@ -1,5 +1,5 @@
 
-.region-inicio-info, .form-group-1, .form-group-2,
+.region-requisitos, .region-inicio-info, .form-group-1, .form-group-2,
 .region-socios-background, .region-info-noticia, .region-img-noticia, {
 @extend .col-md-6;
 @extend .col-lg-6;
@@ -88,7 +88,7 @@
 @extend .col-xs-12;
 }
 
-.region-ubicacion-info{
+.region-contactos-info, .region-ubicacion-info{
 @extend .col-md-4;
 @extend .col-lg-4;
 @extend .col-sm-4;
