@@ -50,7 +50,7 @@
       - @socios1.each do |socio|
         %li.asociado-slide
           = image_tag socio.fotografias.first.fotografia_url(:thumb), class: 'img-responsive'
-    %ul#scroller2
+    %ul#scroller-down
       - @socios2.each do |socio|
         %li.asociado-slide
           = image_tag socio.fotografias.first.fotografia_url(:thumb), class: 'img-responsive'
