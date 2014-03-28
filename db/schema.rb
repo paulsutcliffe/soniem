@@ -161,6 +161,9 @@ ActiveRecord::Schema.define(version: 20140326211638) do
 
   create_table "temas", force: true do |t|
     t.string   "titulo"
+    t.date     "ano"
+    t.string   "duracion"
+    t.string   "formato"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "autor"
