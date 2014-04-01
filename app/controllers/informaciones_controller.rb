@@ -1,4 +1,5 @@
 class InformacionesController < InheritedResources::Base
+  before_filter :authenticate_admin!, except: [:index, :show, :directivos, :convenios]
   def permitted_params
     params.permit(:informacion => [:titulo, :foto, :descripcion])
   end
@@ -9,7 +10,7 @@ class InformacionesController < InheritedResources::Base
     @directivos = Directivo.all
     @convenios = Convenio.all
   end
-  
+
   def show
     @informacion = Informacion.find(params[:id])
     respond_to do |format|

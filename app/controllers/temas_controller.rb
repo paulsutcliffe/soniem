@@ -1,4 +1,5 @@
 class TemasController < InheritedResources::Base
+  before_filter :authenticate_admin!
   def permitted_params
     params.permit(:tema => [:titulo, :autor])
   end
