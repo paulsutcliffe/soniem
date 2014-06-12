@@ -1,23 +1,27 @@
 =image_tag(image_path('fondoabajo.png'), class: 'background')
-#carousel-generic-2.carousel.slide
+#carousel-generic-2.carousel.testimonio
 
   %ol.carousel-indicators
-    - @slides.each_with_index do |slide, index|
+    - @testimonios.each_with_index do |testimonio, index|
       - if index == 0
-        %li.active{:'data-target' => '#carousel-generic-2', :'data-slide-to' => index}
+        %li.active{:'data-target' => '#carousel-generic-2', :'data-testimonio-to' => index}
       - else
-        %li{:'data-target' => '#carousel-generic-2', :'data-slide-to' => index}
+        %li{:'data-target' => '#carousel-generic-2', :'data-testimonio-to' => index}
   .carousel-inner
-    - @slides.each_with_index do |slide, index|
+    - @testimonios.each_with_index do |testimonio, index|
       - if index == 0
         .item.active
           .carousel-caption
             %p
-              = slide.titulo if slide.titulo
+              = testimonio.mensaje
+            %h3
+              = testimonio.nombre
       - else
         .item
           .carousel-caption
             %p
-              = slide.titulo if slide.titulo
+              = testimonio.mensaje
+            %h3
+              = testimonio.nombre
 
 

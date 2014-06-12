@@ -1,0 +1,28 @@
+#region-testimonios.container
+
+  .region
+    .region-title
+      %h1= page_title!('testimonios')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Testimonio', new_testimonio_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Mensaje
+            %th
+            %th
+            %th
+
+          - @testimonios.each do |testimonio|
+            %tr
+              %td= testimonio.nombre
+              %td= testimonio.mensaje
+              %td= link_to 'Ver', testimonio, class: 'btn btn-info'
+              - if current_admin
+                %td= link_to 'Editar', edit_testimonio_path(testimonio), class: 'btn btn-success'
+                %td= link_to 'Eliminar', testimonio, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140326211638) do
+ActiveRecord::Schema.define(version: 20140612205303) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -154,6 +154,8 @@ ActiveRecord::Schema.define(version: 20140326211638) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "nombre_artistico"
+    t.string   "codigo"
   end
 
   add_index "socios", ["email"], name: "index_socios_on_email", unique: true, using: :btree
@@ -161,9 +163,6 @@ ActiveRecord::Schema.define(version: 20140326211638) do
 
   create_table "temas", force: true do |t|
     t.string   "titulo"
-    t.date     "ano"
-    t.string   "duracion"
-    t.string   "formato"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "autor"
@@ -173,6 +172,13 @@ ActiveRecord::Schema.define(version: 20140326211638) do
   create_table "temas_no_registrados", force: true do |t|
     t.string   "titulo"
     t.string   "autor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "testimonios", force: true do |t|
+    t.string   "nombre"
+    t.text     "mensaje"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -18,6 +18,8 @@
           %li= link_to 'Comunicados', comunicados_path
           %li= link_to 'Mensajes', contactos_path
           %li= link_to 'Ubicacion', ubicaciones_path
+          %li= link_to 'Testimonios', testimonios_path
+          %li= link_to 'Eventos', eventos_path
           %li= link_to 'Cerrar Sesión', destroy_admin_session_path, method: :delete
         - else
           %li= link_to 'Inicio', root_path, class: 'active'

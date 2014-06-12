@@ -1,5 +1,7 @@
 Soniem::Application.routes.draw do
 
+  resources :testimonios
+
   resources :temas_no_registrados
 
   resources :preguntas

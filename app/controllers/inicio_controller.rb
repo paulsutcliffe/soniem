@@ -5,5 +5,6 @@ class InicioController < ApplicationController
     @eventos = Evento.order("fecha DESC").limit(3)
     @socios1 = Socio.order("created_at ASC").limit(12)
     @socios2 = Socio.order("created_at DESC").limit(12)
+    @testimonios = Testimonio.all
   end
 end

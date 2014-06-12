@@ -1,0 +1,18 @@
+= form_for @testimonio, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @testimonio.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@testimonio.errors.count, "error")}"
+      %ul
+        - @testimonio.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :nombre, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :nombre, class: 'form-control'
+  .form-group
+    = f.label :mensaje, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :mensaje, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'
