@@ -3,9 +3,9 @@
   = image_tag @informacion.foto_url(:full), class: 'img-responsive'
   .informacion
     .arrow
-      =image_tag(image_path('red-arrow.png'), class: 'img-responsive')
+      = image_tag(image_path('red-arrow.png'), class: 'img-responsive')
     %p.info
-      = @informacion.descripcion
+      = raw(@informacion.descripcion)
   .compartir
     =link_to 'www.facebook.com' do
       %span COMPARTIR
